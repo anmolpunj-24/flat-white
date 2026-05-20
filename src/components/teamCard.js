@@ -16,7 +16,7 @@ export default function TeamCard() {
             </p>
             <span className="rounded-[99px] p-[7px] bg-[#222631]">
               <Image
-                src="/assets/linkedin.svg"
+                src={`/assets/linkedin.svg`}
                 alt="linkedin"
                 height={18}
                 width={19}
@@ -27,7 +27,7 @@ export default function TeamCard() {
         <div className="rounded-[12px]">
           <Image
             className="object-cover rounded-[12px]"
-            src="/assets/woman.webp"
+            src={`/assets/woman.webp`}
             height={100}
             width={100}
             alt="image"
