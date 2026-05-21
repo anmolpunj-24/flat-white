@@ -2,3 +2,26 @@
   background-color: var(--backgroundColor);
   color: var(--color);
 }
+
+.headingTag {
+  font-size: var(--fontSize);
+  color: var(--color);
+  letter-spacing: var(--letterSpacing);
+  line-height: var(--lineHeight);
+  max-width: var(--maxWidth);
+  text-align: var(--align);
+}
+
+.smallHeadingTag {
+  font-size: var(--fontSize);
+  color: var(--color);
+  letter-spacing: var(--letterSpacing);
+  line-height: var(--lineHeight);
+  max-width: var(--maxWidth);
+  text-align: var(--align);
+  font-weight: var(--fontWeight);
+}
+
+.divider{
+  background-color: var(--bgColor);
+}

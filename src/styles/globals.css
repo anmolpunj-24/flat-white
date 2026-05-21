@@ -23,6 +23,19 @@
   box-sizing: border-box;
 }
 
+@theme {
+  --animate-fill-line: fillLine 3s ease-in-out forwards;
+
+  @keyframes fillLine {
+    0% {
+      transform: scaleX(0);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+}
+
 html,
 body {
   max-width: 100vw;
