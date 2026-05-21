@@ -17,7 +17,7 @@ export default function OurMethods() {
         <SectionHeading
           fontSize={`64px`}
           color={`#0a0f15`}
-          letterSpacing={`-.04em`}
+          letterSpacing={`-0.06em`}
           lineHeight={`1em`}
           maxWidth={`800px`}
           text={`Bridging strategy, operations and delivering tangible business growth`}

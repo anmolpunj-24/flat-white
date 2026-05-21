@@ -46,7 +46,7 @@ export default function Partnership() {
             fontWeight={`500`}
           />
 
-          <CtaButton bgColor="#fff" textColor="#111" ctaText={`Apply now`} />
+          <CtaButton bgColor="#fff" textColor="#111" ctaText={`Apply now`} padding={`18px 24px`}/>
         </div>
       </div>
 
@@ -63,7 +63,7 @@ export default function Partnership() {
           <SectionHeading
             fontSize={`64px`}
             color={`#fff`}
-            letterSpacing={`-0.04em`}
+            letterSpacing={`-0.06em`}
             lineHeight={`1em`}
             text={`The team driving strategy, innovation and growth`}
             maxWidth={`720px`}

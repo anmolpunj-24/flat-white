@@ -1,6 +1,3 @@
-// styles import
-import styles from "../styles/index.module.css";
-
 export default function SectionSmallHeading({
   color,
   fontSize,
@@ -9,11 +6,11 @@ export default function SectionSmallHeading({
   align,
   text,
   maxWidth,
-  fontWeight
+  fontWeight,
 }) {
   return (
     <div
-      className={`${styles.smallHeadingTag} whitespace-pre-wrap break-words`}
+      className="whitespace-pre-wrap break-words"
       style={{
         color: color,
         fontSize: fontSize,
@@ -21,7 +18,7 @@ export default function SectionSmallHeading({
         letterSpacing: letterSpacing,
         textAlign: align,
         maxWidth: maxWidth,
-        fontWeight:fontWeight
+        fontWeight: fontWeight,
       }}
     >
       {text}

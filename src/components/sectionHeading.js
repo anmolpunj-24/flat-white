@@ -1,6 +1,3 @@
-// styles import
-import styles from "../styles/index.module.css";
-
 export default function SectionHeading({
   fontSize,
   color,
@@ -12,7 +9,7 @@ export default function SectionHeading({
 }) {
   return (
     <div
-      className={`${styles.headingTag} whitespace-pre-wrap break-words`}
+      className="whitespace-pre-wrap break-words"
       style={{
         fontSize: fontSize,
         color: color,

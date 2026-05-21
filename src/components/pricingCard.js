@@ -31,8 +31,8 @@ export default function PricingCard() {
         ))}
       </ul>
 
-      <div className="flex h-min items-center gap-[30px]">
-        <h6 className="whitespace-pre-wrap break-words max-w-[205px] font-medium">
+      <div className="flex h-min items-center gap-[30px] justify-between w-full">
+        <h6 className="text-[18px] whitespace-pre-wrap break-words max-w-[260px] font-[500] leading-[1.3em] tracking-[-0.04em]">
           Premium consulting services with transparent costs and measurable
           value
         </h6>
@@ -40,6 +40,7 @@ export default function PricingCard() {
           bgColor="#ffff"
           textColor="#111"
           ctaText={`Request a proposal`}
+          padding={`18px 24px`}
         />
       </div>
     </div>

@@ -20,7 +20,7 @@ export default function CardWithSmallImageAndTags() {
         <SectionHeading
           fontSize={`24px`}
           color={`#111`}
-          letterSpacing={`-0.04em`}
+          letterSpacing={`-0.06em`}
           lineHeight={`1.2em`}
           text={`We base every decision on insights, analytics and measurable outcomes`}
         />

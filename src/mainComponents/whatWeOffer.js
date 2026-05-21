@@ -16,7 +16,7 @@ export default function WhatWeOffer() {
         <SectionHeading
           fontSize={`64px`}
           color={`#0a0f15`}
-          letterSpacing={`-0.04em`}
+          letterSpacing={`-0.06em`}
           lineHeight={`1em`}
           text={`Helping companies succeed through strategy and execution`}
           maxWidth={`720px`}
