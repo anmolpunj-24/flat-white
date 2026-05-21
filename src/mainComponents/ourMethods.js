@@ -1,15 +1,15 @@
-// component imports
-import CardWithTagsAndText from "@/components/cardWithTagsAndText";
+// components import
+import CardWithSmallImageAndTags from "@/components/cardWithSmallImageAndTags";
 import Divider from "@/components/divider";
 import SectionHeading from "@/components/sectionHeading";
 import SectionTag from "@/components/sectionTag";
 
-export default function OurExpertise() {
+export default function OurMethods() {
   return (
     <>
-      <div className="flex flex-col gap-[146px] pt-[92px] px-[124px] pb-[46px] h-min">
+      <div className="flex flex-col gap-[146px] py-[46px] px-[124px] h-min">
         <SectionTag
-          heading={`/  Our expertise`}
+          heading={`/  Our methods`}
           bgColor={`#e0e5eb`}
           textColor={`#0a0f15`}
         />
@@ -20,15 +20,15 @@ export default function OurExpertise() {
           letterSpacing={`-.04em`}
           lineHeight={`1em`}
           maxWidth={`800px`}
-          text={`Where strategy, operations and innovation meet measurable results`}
+          text={`Bridging strategy, operations and delivering tangible business growth`}
         />
       </div>
 
       <Divider bgColor={`#f0f1f5`} />
 
-      <div className="grid grid-cols-[repeat(3,minmax(50px,1fr))] grid-rows-1 gap-[4px] pt-[46px] px-[12px] pb-[92px] justify-center">
+      <div className="h-min flex gap-[4px] w-full px-[12px] pt-[46px] pb-[92px]">
         {Array.from({ length: 3 }).map((_, index) => (
-          <CardWithTagsAndText key={index} />
+          <CardWithSmallImageAndTags key={index} />
         ))}
       </div>
     </>
