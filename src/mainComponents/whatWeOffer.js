@@ -8,7 +8,7 @@ export default function WhatWeOffer() {
     <div className="h-min flex flex-col max-w-[1440px] items-center gap-[96px] w-full pt-[46px] pb-[124px] px-[124px] m-auto">
       <div className="flex gap-[100px] h-min p-0 justify-between">
         <SectionTag
-          heading={`/ WHat we offer`}
+          heading={`/  What we offer`}
           bgColor={`#e0e5eb`}
           textColor={"#111"}
         />

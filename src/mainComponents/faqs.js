@@ -1,0 +1,39 @@
+// components import
+import Divider from "@/components/divider";
+import FaqCard from "@/components/faqCard";
+import SectionHeading from "@/components/sectionHeading";
+import SectionTag from "@/components/sectionTag";
+
+export default function Faqs() {
+  return (
+    <div className="px-[12px] pb-[12px]">
+      <div className="h-min items-center relative flex flex-col gap-[46px] h-min bg-[#657084] pt-[164px] px-[112px] pb-[254px] rounded-[12px] w-full">
+        <SectionTag
+          heading={`/  Frequently asked questions`}
+          bgColor={`#747e90`}
+          textColor={`#fff`}
+        />
+        <SectionHeading
+          fontSize={`64px`}
+          color={`#fff`}
+          letterSpacing={`-0.06em`}
+          lineHeight={`1em`}
+          maxWidth={`800px`}
+          text={`Straightforward answers to help you make informed choices.`}
+          align={`center`}
+        />
+        <Divider bgColor={`#747e90`} />
+
+        <div className="">
+          {Array.from({ length: 6 }).map((_, index) => (
+            <FaqCard />
+          ))}
+        </div>
+
+        <span className="absolute bottom-[-20px] left-[18px] right-[18px] text-center text-[13.16em] leading-none font-[600] tracking-[-0.6px] bg-gradient-to-b from-[#9199a9]/20 to-[#9199a9]/3 bg-clip-text text-transparent pointer-events-none select-none">
+          Help Center
+        </span>
+      </div>
+    </div>
+  );
+}

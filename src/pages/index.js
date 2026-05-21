@@ -1,4 +1,5 @@
 // components import
+import Faqs from "@/mainComponents/faqs";
 import Footer from "@/mainComponents/footer";
 import Header from "@/mainComponents/header";
 import OurExpertise from "@/mainComponents/ourExpertise";
@@ -27,6 +28,9 @@ export default function Home() {
 
       {/* pricing */}
       <Pricing />
+
+      {/* faq */}
+      <Faqs />
 
       {/* footer */}
       <Footer />
