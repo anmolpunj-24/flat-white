@@ -6,6 +6,9 @@ import TeamCard from "@/components/teamCard";
 import SectionTag from "@/components/sectionTag";
 import Divider from "@/components/divider";
 
+// nextjs import
+import Image from "next/image";
+
 export default function Partnership() {
   return (
     <div className="h-min items-center pt-[78px] px-[12px] pb-[0px] relative">
@@ -46,13 +49,48 @@ export default function Partnership() {
             fontWeight={`500`}
           />
 
-          <CtaButton bgColor="#fff" textColor="#111" ctaText={`Apply now`} padding={`18px 24px`}/>
+          <CtaButton
+            bgColor="#fff"
+            textColor="#111"
+            ctaText={`Apply now`}
+            padding={`18px 24px`}
+          />
         </div>
       </div>
 
-      <div></div>
-
       <div className="flex flex-col z-10 bg-[#0a0f15] -mt-[8px] rounded-bl-[12px] rounded-br-[12px]">
+        {/* marquee */}
+        <div className="relative flex overflow-x-hidden max-w-[920px] text-white mx-auto w-full pt-[46px] px-[124px] pb-[124px] [mask-image:linear-gradient(to_right,rgba(0,0,0,0)_0%,rgb(0,0,0)_12.5%,rgb(0,0,0)_87.5%,rgba(0,0,0,0)_100%)]">
+          <div className="flex h-[140px] w-[240px] min-w-full shrink-0 justify-around items-center animate-marquee whitespace-nowrap">
+            {Array.from({ length: 3 }).map((_, index) => (
+              <Image
+                key={index}
+                src={`/assets/logoipsum.svg`}
+                alt="logo"
+                height={29}
+                width={121}
+                className="brightness-0 invert"
+              />
+            ))}
+          </div>
+
+          <div
+            className="flex shrink-0 h-[140px] w-[240px] min-w-full justify-around items-center animate-marquee whitespace-nowrap"
+            aria-hidden="true"
+          >
+            {Array.from({ length: 3 }).map((_, index) => (
+              <Image
+                key={index}
+                src={`/assets/logoipsum.svg`}
+                alt="logo"
+                height={29}
+                width={121}
+                className="brightness-0 invert"
+              />
+            ))}
+          </div>
+        </div>
+
         <div className="flex gap-[40px] h-min pt-[92px] px-[124px] pb-[46px] justify-between">
           <SectionTag
             heading={`/  Our experts`}

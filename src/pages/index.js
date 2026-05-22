@@ -5,6 +5,7 @@ import FutureReadyBusiness from "@/mainComponents/futureReadyBusiness";
 import Header from "@/mainComponents/header";
 import OurExpertise from "@/mainComponents/ourExpertise";
 import OurMethods from "@/mainComponents/ourMethods";
+import OurProcess from "@/mainComponents/ourProcess";
 import Partnership from "@/mainComponents/partnership";
 import Pricing from "@/mainComponents/pricing";
 import WhatWeOffer from "@/mainComponents/whatWeOffer";
@@ -27,6 +28,9 @@ export default function Home() {
 
       {/* what we offer */}
       <WhatWeOffer />
+
+      {/* our process */}
+      <OurProcess />
 
       {/* our experties */}
       <OurExpertise />
