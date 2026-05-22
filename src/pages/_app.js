@@ -13,7 +13,7 @@ import Seo from "@/mainComponents/seo";
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className={`${inter.className} mt-[8rem]`}>
+    <div className={`${inter.className} mt-[0.4rem]`}>
       <Seo />
       <Component {...pageProps} />
     </div>

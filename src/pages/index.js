@@ -1,18 +1,26 @@
 // components import
 import Faqs from "@/mainComponents/faqs";
 import Footer from "@/mainComponents/footer";
+import FutureReadyBusiness from "@/mainComponents/futureReadyBusiness";
 import Header from "@/mainComponents/header";
 import OurExpertise from "@/mainComponents/ourExpertise";
 import OurMethods from "@/mainComponents/ourMethods";
 import Partnership from "@/mainComponents/partnership";
 import Pricing from "@/mainComponents/pricing";
 import WhatWeOffer from "@/mainComponents/whatWeOffer";
+import WhoWeAre from "@/mainComponents/whoWeAre";
 
 export default function Home() {
   return (
     <>
       {/* header */}
       <Header />
+
+      {/* future ready business */}
+      <FutureReadyBusiness />
+
+      {/* who we are */}
+      <WhoWeAre />
 
       {/* our methods */}
       <OurMethods />
