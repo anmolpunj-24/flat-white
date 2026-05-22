@@ -52,7 +52,7 @@ export default function Partnership() {
 
       <div></div>
 
-      <div className="flex flex-col z-10 bg-[#0a0f15] -mt-[8px]">
+      <div className="flex flex-col z-10 bg-[#0a0f15] -mt-[8px] rounded-bl-[12px] rounded-br-[12px]">
         <div className="flex gap-[40px] h-min pt-[92px] px-[124px] pb-[46px] justify-between">
           <SectionTag
             heading={`/  Our experts`}

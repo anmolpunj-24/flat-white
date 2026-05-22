@@ -6,7 +6,7 @@ import SectionSmallHeading from "@/components/sectionSmallHeading";
 export default function Pricing() {
   return (
     <div className="flex relative gap-[40px] h-min max-w-[1440px] pt-[340px] px-[124px] pb-[146px]">
-      <span className="absolute top-[-5px] left-[18px] right-[18px] text-center text-[22.5em] leading-none font-[600] tracking-[-0.6px] bg-gradient-to-b from-[#9199a9]/20 to-[#9199a9]/3 bg-clip-text text-transparent pointer-events-none select-none">
+      <span className="absolute top-[-5px] left-[18px] right-[18px] text-center text-[22.5em] leading-none font-[600] tracking-[-0.6px] bg-gradient-to-b from-[#9199a9]/20 to-[#9199a9]/2 bg-clip-text text-transparent pointer-events-none select-none">
         Pricing
       </span>
       <div className="max-w-[440px] flex flex-col content-between h-auto overflow-clip items-center self-stretch">
