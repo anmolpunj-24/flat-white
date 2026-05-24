@@ -15,6 +15,7 @@ export default function FutureReadyBusiness() {
             heading={`/  Future-ready business`}
             bgColor={`#222631`}
             textColor={`#fff`}
+            animation={true}
           />
           <SectionHeading
             fontSize={`74px`}

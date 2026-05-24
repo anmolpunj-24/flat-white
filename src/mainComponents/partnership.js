@@ -96,6 +96,7 @@ export default function Partnership() {
             heading={`/  Our experts`}
             bgColor={`#222631`}
             textColor={"#fff"}
+            animation={true}
           />
 
           <SectionHeading

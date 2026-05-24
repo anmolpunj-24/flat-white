@@ -12,6 +12,7 @@ export default function Faqs() {
           heading={`/  Frequently asked questions`}
           bgColor={`#747e90`}
           textColor={`#fff`}
+          animation={true}
         />
         <SectionHeading
           fontSize={`64px`}
@@ -26,7 +27,7 @@ export default function Faqs() {
 
         <div className="grid grid-cols-[repeat(2,minmax(200px,1fr))] w-full h-min gap-[4px]">
           {Array.from({ length: 6 }).map((_, index) => (
-            <FaqCard />
+            <FaqCard key={index} />
           ))}
         </div>
 

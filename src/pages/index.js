@@ -1,8 +1,9 @@
+// tailwind intersect import
+import "tailwindcss-intersect";
+
 // components import
 import Faqs from "@/mainComponents/faqs";
-import Footer from "@/mainComponents/footer";
 import FutureReadyBusiness from "@/mainComponents/futureReadyBusiness";
-import Header from "@/mainComponents/header";
 import OurExpertise from "@/mainComponents/ourExpertise";
 import OurMethods from "@/mainComponents/ourMethods";
 import OurProcess from "@/mainComponents/ourProcess";
@@ -14,9 +15,6 @@ import WhoWeAre from "@/mainComponents/whoWeAre";
 export default function Home() {
   return (
     <>
-      {/* header */}
-      <Header />
-
       {/* future ready business */}
       <FutureReadyBusiness />
 
@@ -43,9 +41,6 @@ export default function Home() {
 
       {/* faq */}
       <Faqs />
-
-      {/* footer */}
-      <Footer />
     </>
   );
 }

@@ -11,6 +11,7 @@ export default function OurProcess() {
             heading={`/  Our process`}
             bgColor={`#747e90`}
             textColor={`#fff`}
+            animation={true}
           />
           <SectionHeading
             fontSize={`64px`}

@@ -12,6 +12,7 @@ export default function OurExpertise() {
           heading={`/  Our expertise`}
           bgColor={`#e0e5eb`}
           textColor={`#0a0f15`}
+          animation={true}
         />
 
         <SectionHeading

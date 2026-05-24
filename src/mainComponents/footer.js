@@ -4,6 +4,9 @@ import Divider from "@/components/divider";
 import SectionHeading from "@/components/sectionHeading";
 import SectionSmallHeading from "@/components/sectionSmallHeading";
 
+// nextjs import
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <div className="flex flex-col h-min items-center bg-[#0a0f15] rounded-tl-[12px] rounded-tr-[12px] max-w-[1440px] w-full">
@@ -85,9 +88,9 @@ export default function Footer() {
       <div className="flex justify-between gap-[10px] w-full h-min py-[46px] px-[124px] text-[#747e90] text-[12px] leading-[1em] font-[600]">
         <p className="uppercase">
           © 2025 FlatWhite by{" "}
-          <span className="text-[#fff] cursor-pointer hover:text-[#9199a9]">
+          <Link href={`/contact-us`} className="text-[#fff] cursor-pointer hover:text-[#9199a9]">
             ditych
-          </span>{" "}
+          </Link>{" "}
           . All rights reserved.
         </p>
         <span className="whitespace-pre h-min w-min text-[#fff] text-[14px] leading-[1.3em] tracking-[-0.02em] cursor-pointer">

@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "tailwindcss-intersect";
+
 /* 
 :root {
   --background: #ffffff;
@@ -24,17 +26,6 @@
 }
 
 @theme {
-  --animate-fill-line: fillLine 3s ease-in-out forwards;
-
-  @keyframes fillLine {
-    0% {
-      transform: scaleX(0);
-    }
-    100% {
-      transform: scaleX(1);
-    }
-  }
-
   --animate-marquee: marquee 25s linear infinite;
 
   @keyframes marquee {

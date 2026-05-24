@@ -11,6 +11,7 @@ export default function WhatWeOffer() {
           heading={`/  What we offer`}
           bgColor={`#e0e5eb`}
           textColor={"#111"}
+          animation={true}
         />
 
         <SectionHeading

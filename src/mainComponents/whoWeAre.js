@@ -43,6 +43,7 @@ export default function WhoWeAre() {
               heading={`/  Who we are`}
               bgColor={`#222631`}
               textColor={`#fff`}
+              animation={true}
             />
             <SectionHeading
               fontSize={`46px`}
