@@ -4,9 +4,9 @@ import SectionTag from "@/components/sectionTag";
 
 export default function OurProcess() {
   return (
-    <div className="px-[12px]">
-      <div className="bg-[#657084] flex flex-col h-min max-w-[1416px] pt-[164px] px-[112px] gap-[80px] rounded-[12px]">
-        <div className="flex flex-col gap-[146px]">
+    <div className="px-[12px]" id="process">
+      <div className="bg-[#657084] w-full flex items-center flex-col h-min pt-[164px] px-[112px] gap-[80px] rounded-[12px]">
+        <div className="flex flex-col gap-[146px] max-w-[1416px]">
           <SectionTag
             heading={`/  Our process`}
             bgColor={`#747e90`}

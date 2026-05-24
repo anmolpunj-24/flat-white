@@ -8,7 +8,7 @@ export default function WhoWeAre() {
   const items = ["Analysis", "Market", "Growth", "Strategy", "Planning"];
 
   return (
-    <div className="px-[12px] pb-[46px]">
+    <div className="px-[12px] pb-[46px]" id="about-us">
       <div className="pt-[120px] pl-[112px] pr-[60px] pb-[164px] bg-[#0a0f15] rounded-bl-[12px] rounded-br-[12px]">
         <div className="flex gap-[100px]">
           <div className="w-full max-w-[420px] flex gap-[4px] relative">

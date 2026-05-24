@@ -32,7 +32,7 @@ export default function PricingCard() {
       </ul>
 
       <div className="flex h-min items-center gap-[30px] justify-between w-full">
-        <h6 className="text-[18px] whitespace-pre-wrap break-words max-w-[260px] font-[500] leading-[1.3em] tracking-[-0.04em]">
+        <h6 className="text-[18px] whitespace-pre-wrap break-words max-w-[230px] font-[500] leading-[1.3em] tracking-[-0.04em]">
           Premium consulting services with transparent costs and measurable
           value
         </h6>

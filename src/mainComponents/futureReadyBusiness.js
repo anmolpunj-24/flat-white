@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function FutureReadyBusiness() {
   return (
-    <div className="px-[12px] pt-[78px]">
+    <div className="px-[12px]">
       <div className="bg-[#0a0f15] rounded-tl-[12px] rounded-tr-[12px]">
         <div className="h-min max-w-[1416px] flex flex-col gap-[48px] w-full pt-[92px] px-[112px] pb-[46px]">
           <SectionTag

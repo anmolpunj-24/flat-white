@@ -6,11 +6,41 @@ import SectionSmallHeading from "@/components/sectionSmallHeading";
 
 // nextjs import
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
+  let icons = [
+    {
+      iconLight: "/assets/email-light.svg",
+      iconDark: "/assets/email-dark.svg",
+      alt: "mail",
+    },
+    {
+      iconLight: "/assets/insta-light.svg",
+      iconDark: "/assets/insta-dark.svg",
+      alt: "instagram",
+    },
+    {
+      iconLight: "/assets/linkedin-light.svg",
+      iconDark: "/assets/linkedin-dark.svg",
+      alt: "linkedin",
+    },
+    {
+      iconLight: "/assets/slack-light.svg",
+      iconDark: "/assets/slack-dark.svg",
+      alt: "slack",
+    },
+  ];
+
+  let backToTop = () => {
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className="flex flex-col h-min items-center bg-[#0a0f15] rounded-tl-[12px] rounded-tr-[12px] max-w-[1440px] w-full">
-      <div className="gap-[164px] pt-[164px] px-[124px] pb-[52px]">
+    <div className="flex flex-col h-min items-center bg-[#0a0f15] rounded-tl-[12px] rounded-tr-[12px] w-full">
+      <div className="flex flex-col gap-[164px] pt-[164px] px-[124px] pb-[52px] max-w-[1440px] w-full items-center">
         <div className="max-w-[590px] flex flex-col gap-[32px] h-min items-center">
           <SectionHeading
             fontSize={`64px`}
@@ -80,7 +110,100 @@ export default function Footer() {
           </form>
         </div>
 
-        <div></div>
+        <div className="flex w-full justify-between gap-[10px]">
+          <div className="flex gap-[12px] max-w-[390px] min-w-[390px] h-min justify-between">
+            <div className="flex flex-col gap-[24px] h-min">
+              <p className="text-[12px] uppercase font-[600] leadin-[1em] text-[#747e90]">
+                Company
+              </p>
+
+              <div className="flex flex-col gap-[12px]">
+                {["About Us", "Services", "Process", "Pricing"].map(
+                  (item, index) => (
+                    <a
+                      key={index}
+                      href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+                      className="group flex flex-col w-fit"
+                    >
+                      <p className="text-white text-[14px] leading-[1.3em] tracking-[-0.02em]">
+                        {item}
+                      </p>
+
+                      <span className="mt-[2px] h-[1px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
+                    </a>
+                  ),
+                )}
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-[24px] h-min">
+              <p className="text-[12px] uppercase font-[600] leadin-[1em] text-[#747e90]">
+                Contact
+              </p>
+
+              <div className="flex flex-col gap-[12px]">
+                <p className="whitespace-pre text-white text-[14px] leading-[1.3em] tracking-[-0.02em]">
+                  FlatWhite Consulting{"\n"}
+                  10 Queen Street, London, UK
+                </p>
+
+                <a href="mailto:contact@flatwhite.com" className="group w-fit">
+                  <p className="text-white text-[14px] leading-[1.3em] tracking-[-0.02em]">
+                    contact@flatwhite.com
+                  </p>
+
+                  <span className="mt-[2px] block h-[1px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col justify-between">
+            <button
+              className="group flex justify-end items-center gap-[10px] cursor-pointer"
+              onClick={backToTop}
+            >
+              <div className="relative overflow-hidden">
+                <p className="transition-transform duration-300 group-hover:-translate-y-full whitespace-pre text-white text-[14px] leading-[1.3em] tracking-[-0.02em]">
+                  Back to Top
+                </p>
+
+                <p className="absolute left-0 top-0 translate-y-full transition-transform duration-300 group-hover:translate-y-0 whitespace-pre text-white text-[14px] leading-[1.3em] tracking-[-0.02em]">
+                  Back to Top
+                </p>
+              </div>
+
+              <div className="text-white flex items-center justify-center">
+                ↑
+              </div>
+            </button>
+
+            <div className="flex gap-[12px] items-center">
+              {icons.map((ico, index) => (
+                <span
+                  key={index}
+                  className="group rounded-[999px] flex justify-center bg-[#ffffff0a] hover:bg-white cursor-pointer transition-all duration-300 h-[52px] w-[52px]"
+                >
+                  <Image
+                    src={ico?.iconLight}
+                    alt={ico?.alt}
+                    height={22}
+                    width={22}
+                    className="block group-hover:hidden"
+                  />
+
+                  <Image
+                    src={ico?.iconDark}
+                    alt={ico?.alt}
+                    height={22}
+                    width={22}
+                    className="hidden group-hover:block"
+                  />
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
 
       <Divider bgColor={`#ffffff1a`} />
@@ -88,7 +211,10 @@ export default function Footer() {
       <div className="flex justify-between gap-[10px] w-full h-min py-[46px] px-[124px] text-[#747e90] text-[12px] leading-[1em] font-[600]">
         <p className="uppercase">
           © 2025 FlatWhite by{" "}
-          <Link href={`/contact-us`} className="text-[#fff] cursor-pointer hover:text-[#9199a9]">
+          <Link
+            href={`/contact-us`}
+            className="text-[#fff] cursor-pointer hover:text-[#9199a9]"
+          >
             ditych
           </Link>{" "}
           . All rights reserved.
