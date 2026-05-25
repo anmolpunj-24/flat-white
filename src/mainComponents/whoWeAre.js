@@ -4,35 +4,89 @@ import SectionHeading from "@/components/sectionHeading";
 import SectionSmallHeading from "@/components/sectionSmallHeading";
 import SectionTag from "@/components/sectionTag";
 
+// react import
+import { useEffect, useRef } from "react";
+
+// gsap import
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default function WhoWeAre() {
-  const items = ["Analysis", "Market", "Growth", "Strategy", "Planning"];
+  const containerRef = useRef(null);
+
+  const items = [
+    { title: "Analysis", height: "72%" },
+    { title: "Market", height: "27%" },
+    { title: "Growth", height: "86%" },
+    { title: "Strategy", height: "52%" },
+    { title: "Planning", height: "38%" },
+  ];
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const items = Array.from(containerRef.current.children);
+    const centerIndex = (items.length - 1) / 2;
+
+    gsap.from(items, {
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top 90%",
+        toggleActions: "play none none none",
+      },
+      x: (index) => {
+        const distanceIndex = index - centerIndex;
+        return distanceIndex * -84;
+      },
+      opacity: 0,
+      scaleX: 0,
+      duration: 0.8,
+      ease: "power3.out",
+      stagger: {
+        each: 0.1,
+        from: "center",
+      },
+    });
+  }, []);
 
   return (
     <div className="px-[12px] pb-[46px]" id="about-us">
-      <div className="pt-[120px] pl-[112px] pr-[60px] pb-[164px] bg-[#0a0f15] rounded-bl-[12px] rounded-br-[12px]">
+      <div className="flex justify-center pt-[120px] pl-[112px] pr-[60px] pb-[164px] bg-[#0a0f15] rounded-bl-[12px] rounded-br-[12px]">
         <div className="flex gap-[100px]">
-          <div className="w-full max-w-[420px] flex gap-[4px] relative">
+          <div
+            ref={containerRef}
+            className="w-full max-w-[420px] flex items-end gap-[4px] rounded-[20px]"
+          >
             {items.map((item, i) => (
               <div
                 key={i}
-                className="relative flex-1 min-h-[400px] min-w-[80px] border-x border-b border-[#222631] rounded-b-[12px] overflow-hidden"
+                className="relative flex-1 min-w-[80px] rounded-b-[12px]"
+                style={{
+                  height: item.height,
+                }}
               >
-                {/* top borders */}
-                <div className="absolute inset-x-0 top-0 h-full border-x border-[#222631] pointer-events-none" />
+                {/* outer borders */}
+                <div className="absolute inset-0 border-x border-b border-[#1d2633] rounded-b-[18px]" />
 
-                {/* backdrop */}
-                <div className="absolute inset-0 bg-[#13171c] rounded-b-[12px]" />
+                {/* inner backdrop */}
+                <div className="absolute inset-x-[1px] bottom-[1px] top-[30px] bg-[#13171c] rounded-b-[16px]" />
 
-                {/* label */}
-                <div className="absolute left-1/2 -translate-x-1/2 top-[60px] z-10">
-                  <p className="uppercase text-white text-[12px] font-[600] leading-[1em] whitespace-nowrap">
-                    {item}
-                  </p>
-                </div>
+                {/* top border lines */}
+                <div className="absolute top-0 left-0 w-[1px] h-[30px]" />
+                <div className="absolute top-0 right-0 w-[1px] h-[30px] bg-[#1d2633]" />
 
                 {/* bullet */}
-                <div className="absolute left-1/2 -translate-x-1/2 top-[30px] z-10">
-                  <div className="w-[10px] h-[10px] bg-[#222631] rounded-[25%]" />
+                <div className="absolute left-1/2 top-[-50px] -translate-x-1/2">
+                  <div className="w-[10px] h-[10px] rounded-[3px] bg-[#222c3a]" />
+                </div>
+
+                {/* title */}
+                <div className="absolute left-1/2 top-[-30px] -translate-x-1/2">
+                  <p className="uppercase text-white font-[700] text-[12px] whitespace-nowrap">
+                    {item.title}
+                  </p>
                 </div>
               </div>
             ))}

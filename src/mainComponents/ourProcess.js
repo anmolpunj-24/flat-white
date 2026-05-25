@@ -1,8 +1,60 @@
+// component import
 import Divider from "@/components/divider";
 import SectionHeading from "@/components/sectionHeading";
 import SectionTag from "@/components/sectionTag";
 
+// react import
+import React, { useEffect, useRef, useState } from "react";
+
+// gsap import
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default function OurProcess() {
+  const containerRef = useRef(null);
+  const pathRef = useRef(null);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    if (!pathRef.current) return;
+
+    const ctx = gsap.context(() => {
+      const path = pathRef.current;
+
+      const length = path.getTotalLength();
+
+      gsap.set(path, {
+        strokeDasharray: length,
+        strokeDashoffset: length,
+      });
+
+      gsap.to(path, {
+        strokeDashoffset: 0,
+        ease: "none",
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top center",
+          end: "bottom center",
+          scrub: true,
+          markers: false,
+        },
+      });
+
+      // refresh after layout
+      ScrollTrigger.refresh();
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  if (!isMounted) {
+    return (
+      <div className="relative h-full w-full max-w-[940px] aspect-[1199/1434]" />
+    );
+  }
+
   return (
     <div className="px-[12px]" id="process">
       <div className="bg-[#657084] w-full flex items-center flex-col h-min pt-[164px] px-[112px] gap-[80px] rounded-[12px]">
@@ -22,7 +74,10 @@ export default function OurProcess() {
           />
         </div>
 
-        <div className="relative h-full w-full max-w-[940px]">
+        <div
+          className="relative w-full max-w-[940px]"
+          ref={containerRef}
+        >
           <Divider bgColor={`#ffffff1a`} />
 
           <svg
@@ -33,8 +88,9 @@ export default function OurProcess() {
           >
             <path
               d="M232.488 0C232.488 46.2989 269.981 83.8525 316.279 83.9273L975.782 84.9935C1099.37 85.1932 1199.11 186.067 1197.91 309.646C1196.73 431.828 1097.32 530.197 975.135 529.997C856.628 529.803 711.976 529.566 598.349 529.38C480.719 529.188 329.837 528.941 209.135 528.744C94.1047 528.555 0.731262 621.631 0.50032 736.661C0.269118 851.82 93.5111 945.323 208.671 945.415L861.46 945.931C970.456 946.018 1058.77 1034.4 1058.77 1143.4C1058.77 1252.98 969.54 1341.6 859.96 1340.86L628.689 1339.28C576.127 1338.93 533.326 1381.44 533.326 1434"
-              stroke="rgba(255, 255, 255, 0.1)"
+              stroke="rgba(255,255,255,0.1)"
               strokeWidth="1"
+              fill="none"
             />
           </svg>
 
@@ -45,13 +101,11 @@ export default function OurProcess() {
             className="absolute top-0 left-0 w-full h-auto"
           >
             <path
+              ref={pathRef}
               d="M232.488 0C232.488 46.2989 269.981 83.8525 316.279 83.9273L975.782 84.9935C1099.37 85.1932 1199.11 186.067 1197.91 309.646C1196.73 431.828 1097.32 530.197 975.135 529.997C856.628 529.803 711.976 529.566 598.349 529.38C480.719 529.188 329.837 528.941 209.135 528.744C94.1047 528.555 0.731262 621.631 0.50032 736.661C0.269118 851.82 93.5111 945.323 208.671 945.415L861.46 945.931C970.456 946.018 1058.77 1034.4 1058.77 1143.4C1058.77 1252.98 969.54 1341.6 859.96 1340.86L628.689 1339.28C576.127 1338.93 533.326 1381.44 533.326 1434"
-              stroke="rgb(255, 255, 255)"
+              stroke="white"
               strokeWidth="1"
-              style={{
-                strokeDasharray: "4566.18, 4566.18",
-                strokeDashoffset: "4054.28",
-              }}
+              fill="none"
             />
           </svg>
         </div>

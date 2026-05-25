@@ -7,7 +7,7 @@ import SectionTag from "@/components/sectionTag";
 export default function OurMethods() {
   return (
     <>
-      <div className="flex flex-col gap-[146px] py-[46px] px-[124px] h-min">
+      <div className="flex flex-col gap-[146px] py-[46px] px-[124px] h-min" id="our-methods">
         <SectionTag
           heading={`/  Our methods`}
           bgColor={`#e0e5eb`}

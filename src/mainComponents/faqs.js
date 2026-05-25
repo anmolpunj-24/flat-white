@@ -25,7 +25,7 @@ export default function Faqs() {
         />
         <Divider bgColor={`#747e90`} />
 
-        <div className="grid grid-cols-[repeat(2,minmax(200px,1fr))] w-full h-min gap-[4px]">
+        <div className="columns-2 gap-[4px] space-y-[4px]">
           {Array.from({ length: 6 }).map((_, index) => (
             <FaqCard key={index} />
           ))}

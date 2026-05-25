@@ -14,27 +14,42 @@ export default function Footer() {
       iconLight: "/assets/email-light.svg",
       iconDark: "/assets/email-dark.svg",
       alt: "mail",
+      link: `mailto:contact@flatwhite.com`,
     },
     {
       iconLight: "/assets/insta-light.svg",
       iconDark: "/assets/insta-dark.svg",
       alt: "instagram",
+      link: `https://www.instagram.com`,
     },
     {
       iconLight: "/assets/linkedin-light.svg",
       iconDark: "/assets/linkedin-dark.svg",
       alt: "linkedin",
+      link: `https://www.linkedin.com`,
     },
     {
       iconLight: "/assets/slack-light.svg",
       iconDark: "/assets/slack-dark.svg",
       alt: "slack",
+      link: `https://slack.com`,
     },
   ];
 
   let backToTop = () => {
     if (typeof window !== "undefined") {
       window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+  let toSection = (e, el) => {
+    e.preventDefault();
+    if (typeof window !== "undefined") {
+      const id = el.toLowerCase().replace(/\s+/g, "-");
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
   };
 
@@ -124,6 +139,7 @@ export default function Footer() {
                       key={index}
                       href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
                       className="group flex flex-col w-fit"
+                      onClick={(e) => toSection(e, item)}
                     >
                       <p className="text-white text-[14px] leading-[1.3em] tracking-[-0.02em]">
                         {item}
@@ -180,7 +196,8 @@ export default function Footer() {
 
             <div className="flex gap-[12px] items-center">
               {icons.map((ico, index) => (
-                <span
+                <Link
+                  href={ico?.link}
                   key={index}
                   className="group rounded-[999px] flex justify-center bg-[#ffffff0a] hover:bg-white cursor-pointer transition-all duration-300 h-[52px] w-[52px]"
                 >
@@ -199,7 +216,7 @@ export default function Footer() {
                     width={22}
                     className="hidden group-hover:block"
                   />
-                </span>
+                </Link>
               ))}
             </div>
           </div>
@@ -212,7 +229,7 @@ export default function Footer() {
         <p className="uppercase">
           © 2025 FlatWhite by{" "}
           <Link
-            href={`/contact-us`}
+            href={`https://ditych.com`}
             className="text-[#fff] cursor-pointer hover:text-[#9199a9]"
           >
             ditych
