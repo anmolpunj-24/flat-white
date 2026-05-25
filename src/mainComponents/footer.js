@@ -55,21 +55,21 @@ export default function Footer() {
 
   return (
     <div className="flex flex-col h-min items-center bg-[#0a0f15] rounded-tl-[12px] rounded-tr-[12px] w-full">
-      <div className="flex flex-col gap-[164px] pt-[164px] px-[124px] pb-[52px] max-w-[1440px] w-full items-center">
+      <div className="flex flex-col gap-[60px] lg:gap-[164px] pt-[60px] lg:pt-[164px] px-[20px] lg:px-[40px] xl:px-[124px] pb-[40px] lg:pb-[52px] max-w-[1440px] w-full items-center">
         <div className="max-w-[590px] flex flex-col gap-[32px] h-min items-center">
           <SectionHeading
-            fontSize={`64px`}
+            fontSize={`text-[36px] lg:text-[60px] xl:text-[64px]`}
             color={`#fff`}
-            letterSpacing={`-0.06em`}
-            lineHeight={`1em`}
+            letterSpacing={`tracking-[-0.06em]`}
+            lineHeight={`leading-[1em]`}
             text={`Unlock growth with strategic insights`}
             align={`center`}
           />
           <SectionSmallHeading
             color={`#bfc7d4`}
             fontSize={`16px`}
-            lineHeight={`1.4em`}
-            letterSpacing={`-0.02em`}
+            lineHeight={`leading-[1.4em]`}
+            letterSpacing={`tracking-[-0.02em]`}
             align={`center`}
             text={`Learn how systematic methods can support better portfolio outcomes.`}
             maxWidth={`390px`}
@@ -125,14 +125,14 @@ export default function Footer() {
           </form>
         </div>
 
-        <div className="flex w-full justify-between gap-[10px]">
-          <div className="flex gap-[12px] max-w-[390px] min-w-[390px] h-min justify-between">
-            <div className="flex flex-col gap-[24px] h-min">
+        <div className="flex flex-col lg:flex-row w-full justify-between gap-[60px] lg:gap-[10px]">
+          <div className="flex flex-col lg:flex-row gap-x-[70px] gap-y-[40px] lg:gap-[12px] lg:max-w-[390px] lg:min-w-[390px] h-min lg:justify-between">
+            <div className="flex flex-col gap-[18px] lg:gap-[24px] h-min items-center lg:items-start">
               <p className="text-[12px] uppercase font-[600] leadin-[1em] text-[#747e90]">
                 Company
               </p>
 
-              <div className="flex flex-col gap-[12px]">
+              <div className="flex flex-col gap-[12px] items-center lg:items-start">
                 {["About Us", "Services", "Process", "Pricing"].map(
                   (item, index) => (
                     <a
@@ -150,15 +150,15 @@ export default function Footer() {
                   ),
                 )}
               </div>
-            </div>
+            </div> 
 
-            <div className="flex flex-col gap-[24px] h-min">
+            <div className="flex flex-col gap-[18px] lg:gap-[24px] h-min items-center lg:items-start">
               <p className="text-[12px] uppercase font-[600] leadin-[1em] text-[#747e90]">
                 Contact
               </p>
 
-              <div className="flex flex-col gap-[12px]">
-                <p className="whitespace-pre text-white text-[14px] leading-[1.3em] tracking-[-0.02em]">
+              <div className="flex flex-col gap-[12px] items-center lg:items-start">
+                <p className="whitespace-pre text-white text-[14px] leading-[1.3em] tracking-[-0.02em] text-center lg:text-start">
                   FlatWhite Consulting{"\n"}
                   10 Queen Street, London, UK
                 </p>
@@ -174,9 +174,9 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex flex-col justify-between">
+          <div className="flex lg:flex-col lg:justify-between gap-[24px] lg:gap-0 sm:flex-col-reverse">
             <button
-              className="group flex justify-end items-center gap-[10px] cursor-pointer"
+              className="group flex justify-center lg:justify-end items-center gap-[10px] cursor-pointer"
               onClick={backToTop}
             >
               <div className="relative overflow-hidden">
@@ -194,7 +194,7 @@ export default function Footer() {
               </div>
             </button>
 
-            <div className="flex gap-[12px] items-center">
+            <div className="flex gap-[12px] items-center sm:justify-center">
               {icons.map((ico, index) => (
                 <Link
                   href={ico?.link}
@@ -225,7 +225,7 @@ export default function Footer() {
 
       <Divider bgColor={`#ffffff1a`} />
 
-      <div className="flex justify-between gap-[10px] w-full h-min py-[46px] px-[124px] text-[#747e90] text-[12px] leading-[1em] font-[600]">
+      <div className="flex flex-col lg:flex-row items-center lg:justify-between gap-[24px] lg:gap-[10px] w-full h-min py-[40px] lg:py-[46px] px-[20px] lg:px-[124px] text-[#747e90] text-[12px] leading-[1em] font-[600]">
         <p className="uppercase">
           © 2025 FlatWhite by{" "}
           <Link

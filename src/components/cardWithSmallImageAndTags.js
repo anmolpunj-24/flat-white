@@ -20,15 +20,15 @@ export default function CardWithSmallImageAndTags() {
         <SectionHeading
           fontSize={`24px`}
           color={`#111`}
-          letterSpacing={`-0.06em`}
-          lineHeight={`1.2em`}
+          letterSpacing={`tracking-[-0.06em]`}
+          lineHeight={`leading-[1.2em]`}
           text={`We base every decision on insights, analytics and measurable outcomes`}
         />
         <SectionSmallHeading
           color={`#657084`}
           fontSize={`16px`}
-          lineHeight={`1.4em`}
-          letterSpacing={`-0.02em`}
+          lineHeight={`leading-[1.4em]`}
+          letterSpacing={`tracking-[-0.02em]`}
           text={`FlatWhite uses data and analytics to guide strategy and deliver tangible results.`}
           fontWeight={500}
         />

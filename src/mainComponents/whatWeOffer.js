@@ -22,8 +22,8 @@ export default function WhatWeOffer() {
         <SectionHeading
           fontSize={`64px`}
           color={`#0a0f15`}
-          letterSpacing={`-0.06em`}
-          lineHeight={`1em`}
+          letterSpacing={`tracking-[-0.06em]`}
+          lineHeight={`leading[1em]`}
           text={`Helping companies succeed through strategy and execution`}
           maxWidth={`720px`}
         />
@@ -45,15 +45,15 @@ export default function WhatWeOffer() {
             <SectionHeading
               fontSize={`24px`}
               color={`#0a0f15`}
-              letterSpacing={`-0.06em`}
-              lineHeight={`1.2em`}
+              letterSpacing={`tracking-[-0.06em]`}
+              lineHeight={`leading-[1.2em]`}
               text={`Delivering impact with confidence`}
             />
             <SectionSmallHeading
               color={`#747e90`}
               fontSize={`16px`}
-              lineHeight={`1.4em`}
-              letterSpacing={`-0.02em`}
+              lineHeight={`leading-[1.4em]`}
+              letterSpacing={`tracking-[-0.02em]`}
               text={`At FlatWhite, every service is designed to create measurable results while maintaining the highest standards of integrity and confidentiality. We value your trust and handle all information with care in accordance with our Privacy Policy.`}
               maxWidth={`690px`}
             />

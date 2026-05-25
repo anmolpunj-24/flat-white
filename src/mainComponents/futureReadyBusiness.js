@@ -20,8 +20,8 @@ export default function FutureReadyBusiness() {
           <SectionHeading
             fontSize={`74px`}
             color={`#fff`}
-            letterSpacing={`-0.06em`}
-            lineHeight={`1em`}
+            letterSpacing={`tracking-[-0.06em]`}
+            lineHeight={`leading-[1em]`}
             maxWidth={`850px`}
             text={`Empowering сompanies to grow smarter and faster`}
           />
@@ -30,8 +30,8 @@ export default function FutureReadyBusiness() {
             <SectionSmallHeading
               color={`#bfc7d4`}
               fontSize={`16px`}
-              lineHeight={`1.4em`}
-              letterSpacing={`-0.02em`}
+              lineHeight={`leading-[1.4em]`}
+              letterSpacing={`tracking-[-0.02em]`}
               text={`FlatWhite partners with leadership teams to redefine strategy, streamline operations and unlock sustainable growth. We translate ambition into an actionable roadmap using data, technology and close collaboration.`}
               maxWidth={`410px`}
             />

@@ -20,8 +20,8 @@ export default function Partnership() {
           <SectionHeading
             fontSize={`64px`}
             color={`#fff`}
-            letterSpacing={`-0.02em`}
-            lineHeight={`1em`}
+            letterSpacing={`tracking-[-0.02em]`}
+            lineHeight={`leading-[1em]`}
             maxWidth={`680px`}
             text={`Building partnerships that drive growth`}
             align={`center`}
@@ -41,8 +41,8 @@ export default function Partnership() {
           <SectionSmallHeading
             color={`#f0f1f5`}
             fontSize={`18px`}
-            lineHeight={`1.3em`}
-            letterSpacing={`-0.02em`}
+            lineHeight={`leading-[1.3em]`}
+            letterSpacing={`tracking-[-0.02em]`}
             align={`center`}
             text={`We work closely with clients to deliver results efficiently and effectively. By embedding ourselves in their teams, we ensure strategies are actionable, sustainable, and create long-term value across the organization.`}
             maxWidth={`460px`}
@@ -102,8 +102,8 @@ export default function Partnership() {
           <SectionHeading
             fontSize={`64px`}
             color={`#fff`}
-            letterSpacing={`-0.06em`}
-            lineHeight={`1em`}
+            letterSpacing={`tracking-[-0.06em]`}
+            lineHeight={`leading-[1em]`}
             text={`The team driving strategy, innovation and growth`}
             maxWidth={`720px`}
           />

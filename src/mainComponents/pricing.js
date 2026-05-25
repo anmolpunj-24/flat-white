@@ -13,8 +13,8 @@ export default function Pricing() {
         <SectionHeading
           fontSize={`64px`}
           color={`#111`}
-          letterSpacing={`-0.06em`}
-          lineHeight={`1em`}
+          letterSpacing={`tracking-[-0.06em]`}
+          lineHeight={`leading-[1em]`}
           text={`Smart solutions, straightforward costs`}
         />
 
@@ -22,15 +22,15 @@ export default function Pricing() {
           <SectionHeading
             fontSize={`24px`}
             color={`#111`}
-            letterSpacing={`-0.06em`}
-            lineHeight={`1.2em`}
+            letterSpacing={`tracking-[-0.06em]`}
+            lineHeight={`leading-[1.2em]`}
             text={`Transparent pricing for premium consulting services`}
           />
           <SectionSmallHeading
             color={`#747e90`}
             fontSize={`16px`}
-            lineHeight={`1.4em`}
-            letterSpacing={`-0.02em`}
+            lineHeight={`leading-[1.4em]`}
+            letterSpacing={`tracking-[-0.02em]`}
             text={`Final pricing depends on the scope, complexity and duration of the engagement. Contact us for a tailored proposal.`}
             maxWidth={`390px`}
           />

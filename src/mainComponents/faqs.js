@@ -17,8 +17,8 @@ export default function Faqs() {
         <SectionHeading
           fontSize={`64px`}
           color={`#fff`}
-          letterSpacing={`-0.06em`}
-          lineHeight={`1em`}
+          letterSpacing={`tracking-[-0.06em]`}
+          lineHeight={`leading-[1em]`}
           maxWidth={`800px`}
           text={`Straightforward answers to help you make informed choices.`}
           align={`center`}

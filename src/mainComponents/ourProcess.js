@@ -57,8 +57,8 @@ export default function OurProcess() {
           <SectionHeading
             fontSize={`64px`}
             color={`#fff`}
-            letterSpacing={`-0.06em`}
-            lineHeight={`1em`}
+            letterSpacing={`tracking-[-0.06em]`}
+            lineHeight={`leading-[1em]`}
             text={`How we transform strategy, insights and expertise into measurable business outcomes`}
           />
         </div>
@@ -111,15 +111,15 @@ export default function OurProcess() {
             <SectionHeading
               fontSize={`24px`}
               color={`#fff`}
-              letterSpacing={`-0.06em`}
-              lineHeight={`1.2em`}
+              letterSpacing={`tracking-[-0.06em]`}
+              lineHeight={`leading-[1.2em]`}
               text={`Discover opportunities and define your priorities`}
             />
             <SectionSmallHeading
               color={`#d6d9e2`}
               fontSize={`16px`}
-              lineHeight={`1.4em`}
-              letterSpacing={`-0.02em`}
+              lineHeight={`leading-[1.4em]`}
+              letterSpacing={`tracking-[-0.02em]`}
               text={`We analyze your business, market and goals to identify key opportunities. Our approach combines industry insight, data-driven analysis and stakeholder engagement to create a clear foundation for meaningful transformation.`}
             />
           </div>
@@ -133,15 +133,15 @@ export default function OurProcess() {
             <SectionHeading
               fontSize={`24px`}
               color={`#fff`}
-              letterSpacing={`-0.06em`}
-              lineHeight={`1.2em`}
+              letterSpacing={`tracking-[-0.06em]`}
+              lineHeight={`leading-[1.2em]`}
               text={`Discover opportunities and define your priorities`}
             />
             <SectionSmallHeading
               color={`#d6d9e2`}
               fontSize={`16px`}
-              lineHeight={`1.4em`}
-              letterSpacing={`-0.02em`}
+              lineHeight={`leading-[1.4em]`}
+              letterSpacing={`tracking-[-0.02em]`}
               text={`We analyze your business, market and goals to identify key opportunities. Our approach combines industry insight, data-driven analysis and stakeholder engagement to create a clear foundation for meaningful transformation.`}
             />
           </div>
@@ -155,15 +155,15 @@ export default function OurProcess() {
             <SectionHeading
               fontSize={`24px`}
               color={`#fff`}
-              letterSpacing={`-0.06em`}
-              lineHeight={`1.2em`}
+              letterSpacing={`tracking-[-0.06em]`}
+              lineHeight={`leading-[1.2em]`}
               text={`Discover opportunities and define your priorities`}
             />
             <SectionSmallHeading
               color={`#d6d9e2`}
               fontSize={`16px`}
-              lineHeight={`1.4em`}
-              letterSpacing={`-0.02em`}
+              lineHeight={`leading-[1.4em]`}
+              letterSpacing={`tracking-[-0.02em]`}
               text={`We analyze your business, market and goals to identify key opportunities. Our approach combines industry insight, data-driven analysis and stakeholder engagement to create a clear foundation for meaningful transformation.`}
             />
           </div>

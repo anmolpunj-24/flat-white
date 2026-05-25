@@ -103,15 +103,15 @@ export default function WhoWeAre() {
             <SectionHeading
               fontSize={`46px`}
               color={`#fff`}
-              letterSpacing={`-0.06em`}
-              lineHeight={`1em`}
+              letterSpacing={`tracking-[-0.06em]`}
+              lineHeight={`leading-[1em]`}
               text={`Strategic transformation, enabling businesses to scale with clarity and consistent performance improvement.`}
             />
             <SectionSmallHeading
               color={`#bfc7d4`}
               fontSize={`16px`}
-              lineHeight={`1.4em`}
-              letterSpacing={`-0.02em`}
+              lineHeight={`leading-[1.4em]`}
+              letterSpacing={`tracking-[-0.02em]`}
               text={`FlatWhite is a consulting partner for companies that demand both vision and execution. We turn strategic goals into operational reality and create value that lasts.`}
               maxWidth={`440px`}
             />

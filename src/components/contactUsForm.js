@@ -4,12 +4,12 @@ import SectionSmallHeading from "./sectionSmallHeading";
 
 export default function ContactUsForm() {
   return (
-    <div className="flex flex-col h-min gap-[32px] max-w-[460px]">
+    <div className="flex flex-col h-min gap-[32px] max-w-[490px] lg:max-w-[460px]">
       <SectionSmallHeading
         color={`#0a0f15`}
-        fontSize={`24px`}
-        lineHeight={`1.2em`}
-        letterSpacing={`-0.06em`}
+        fontSize={`text-[24px]`}
+        lineHeight={`leading-[1.2em]`}
+        letterSpacing={`tracking-[-0.06em]`}
         text={`Need assistance or information? \nContact us and we’ll reply as soon as possible.`}
       />
 

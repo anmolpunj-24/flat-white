@@ -16,7 +16,7 @@ export default function Header() {
         element.scrollIntoView({ behavior: "smooth" });
       }
     }
-  };
+  }; 
 
   return (
     <div className="fixed top-0 left-0 z-20 bg-[#fff] w-full h-min p-0 overflow-hidden flex items-center gap-[10px] justify-between max-w-[1440px] p-[20px]">
