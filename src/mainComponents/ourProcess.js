@@ -9,20 +9,19 @@ import React, { useEffect, useRef, useState } from "react";
 // gsap import
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SectionSmallHeading from "@/components/sectionSmallHeading";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function OurProcess() {
   const containerRef = useRef(null);
   const pathRef = useRef(null);
-  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     if (!pathRef.current) return;
 
     const ctx = gsap.context(() => {
       const path = pathRef.current;
-
       const length = path.getTotalLength();
 
       gsap.set(path, {
@@ -36,24 +35,14 @@ export default function OurProcess() {
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top center",
-          end: "bottom center",
+          end: "bottom bottom",
           scrub: true,
-          markers: false,
         },
       });
-
-      // refresh after layout
-      ScrollTrigger.refresh();
     }, containerRef);
 
     return () => ctx.revert();
   }, []);
-
-  if (!isMounted) {
-    return (
-      <div className="relative h-full w-full max-w-[940px] aspect-[1199/1434]" />
-    );
-  }
 
   return (
     <div className="px-[12px]" id="process">
@@ -75,7 +64,7 @@ export default function OurProcess() {
         </div>
 
         <div
-          className="relative w-full max-w-[940px]"
+          className="relative w-full max-w-[940px] min-h-[1120px]"
           ref={containerRef}
         >
           <Divider bgColor={`#ffffff1a`} />
@@ -98,7 +87,7 @@ export default function OurProcess() {
             viewBox="0 0 1199 1434"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="absolute top-0 left-0 w-full h-auto"
+            className="absolute top-0 left-0 w-full h-auto overflow-visible"
           >
             <path
               ref={pathRef}
@@ -106,8 +95,78 @@ export default function OurProcess() {
               stroke="white"
               strokeWidth="1"
               fill="none"
+              style={{
+                strokeDasharray: 5000,
+                strokeDashoffset: 5000,
+              }}
             />
           </svg>
+
+          <div className="flex flex-col gap-[12px] absolute top-[128px] right-[90px] w-[380px]">
+            <SectionTag
+              heading={`/ 001`}
+              bgColor={`#747e90`}
+              textColor={`#fff`}
+            />
+            <SectionHeading
+              fontSize={`24px`}
+              color={`#fff`}
+              letterSpacing={`-0.06em`}
+              lineHeight={`1.2em`}
+              text={`Discover opportunities and define your priorities`}
+            />
+            <SectionSmallHeading
+              color={`#d6d9e2`}
+              fontSize={`16px`}
+              lineHeight={`1.4em`}
+              letterSpacing={`-0.02em`}
+              text={`We analyze your business, market and goals to identify key opportunities. Our approach combines industry insight, data-driven analysis and stakeholder engagement to create a clear foundation for meaningful transformation.`}
+            />
+          </div>
+
+          <div className="flex flex-col gap-[12px] absolute top-[470px] left-[120px] w-[380px]">
+            <SectionTag
+              heading={`/ 001`}
+              bgColor={`#747e90`}
+              textColor={`#fff`}
+            />
+            <SectionHeading
+              fontSize={`24px`}
+              color={`#fff`}
+              letterSpacing={`-0.06em`}
+              lineHeight={`1.2em`}
+              text={`Discover opportunities and define your priorities`}
+            />
+            <SectionSmallHeading
+              color={`#d6d9e2`}
+              fontSize={`16px`}
+              lineHeight={`1.4em`}
+              letterSpacing={`-0.02em`}
+              text={`We analyze your business, market and goals to identify key opportunities. Our approach combines industry insight, data-driven analysis and stakeholder engagement to create a clear foundation for meaningful transformation.`}
+            />
+          </div>
+
+          <div className="flex flex-col gap-[12px] absolute top-[790px] right-[180px] w-[380px]">
+            <SectionTag
+              heading={`/ 001`}
+              bgColor={`#747e90`}
+              textColor={`#fff`}
+            />
+            <SectionHeading
+              fontSize={`24px`}
+              color={`#fff`}
+              letterSpacing={`-0.06em`}
+              lineHeight={`1.2em`}
+              text={`Discover opportunities and define your priorities`}
+            />
+            <SectionSmallHeading
+              color={`#d6d9e2`}
+              fontSize={`16px`}
+              lineHeight={`1.4em`}
+              letterSpacing={`-0.02em`}
+              text={`We analyze your business, market and goals to identify key opportunities. Our approach combines industry insight, data-driven analysis and stakeholder engagement to create a clear foundation for meaningful transformation.`}
+            />
+          </div>
         </div>
       </div>
     </div>
