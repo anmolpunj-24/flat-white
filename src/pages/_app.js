@@ -15,14 +15,14 @@ const inter = Inter({
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className={`${inter.className}`}>
+    <div className={`${inter.className} flex flex-col min-h-screen`}>
       {/* seo */}
       <Seo />
 
       {/* header */}
       <Header />
 
-      <main className="mt-[5.5rem]">
+      <main className="flex-grow mt-[5.5rem]">
         <Component {...pageProps} />
       </main>
 

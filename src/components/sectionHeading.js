@@ -9,12 +9,9 @@ export default function SectionHeading({
 }) {
   return (
     <div
-      className="whitespace-pre-wrap break-words"
+      className={`${fontSize} ${letterSpacing} ${lineHeight} whitespace-pre-wrap break-words`}
       style={{
-        fontSize: fontSize,
         color: color,
-        letterSpacing: letterSpacing,
-        lineHeight: lineHeight,
         maxWidth: maxWidth,
         textAlign: align,
       }}

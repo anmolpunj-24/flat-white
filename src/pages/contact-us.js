@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function ContactUs() {
   return (
-    <div className="flex gap-[112px] h-min max-w-[1440px] py-[92px] px-[124px]">
+    <div className="flex gap-[112px] h-min max-w-[1440px] py-[92px] px-[124px] mx-auto">
       <div className="flex flex-col justify-between">
         <SectionHeading
           fontSize={`74px`}

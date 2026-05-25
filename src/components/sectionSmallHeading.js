@@ -10,12 +10,9 @@ export default function SectionSmallHeading({
 }) {
   return (
     <div
-      className="whitespace-pre-wrap break-words"
+      className={`${fontSize} ${lineHeight} ${letterSpacing} whitespace-pre-wrap break-words`}
       style={{
         color: color,
-        fontSize: fontSize,
-        lineHeight: lineHeight,
-        letterSpacing: letterSpacing,
         textAlign: align,
         maxWidth: maxWidth,
         fontWeight: fontWeight,
