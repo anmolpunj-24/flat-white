@@ -236,9 +236,12 @@ export default function Footer() {
           </Link>{" "}
           . All rights reserved.
         </p>
-        <span className="whitespace-pre h-min w-min text-[#fff] text-[14px] leading-[1.3em] tracking-[-0.02em] cursor-pointer">
+        <Link
+          href={`/privacy-policy`}
+          className="whitespace-pre h-min w-min text-[#fff] text-[14px] leading-[1.3em] tracking-[-0.02em] cursor-pointer"
+        >
           Privacy Policy
-        </span>
+        </Link>
       </div>
     </div>
   );
