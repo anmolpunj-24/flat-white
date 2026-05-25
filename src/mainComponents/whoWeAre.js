@@ -3,6 +3,7 @@ import CtaButton from "@/components/ctaButton";
 import SectionHeading from "@/components/sectionHeading";
 import SectionSmallHeading from "@/components/sectionSmallHeading";
 import SectionTag from "@/components/sectionTag";
+import CardWithDots from "@/components/cardWithDots";
 
 // react import
 import { useEffect, useRef } from "react";
@@ -53,8 +54,8 @@ export default function WhoWeAre() {
 
   return (
     <div className="px-[12px] pb-[46px]" id="about-us">
-      <div className="flex justify-center pt-[120px] pl-[112px] pr-[60px] pb-[164px] bg-[#0a0f15] rounded-bl-[12px] rounded-br-[12px]">
-        <div className="flex gap-[100px]">
+      <div className="flex flex-col justify-center bg-[#0a0f15] rounded-bl-[12px] rounded-br-[12px]">
+        <div className="flex gap-[100px] pt-[120px] pl-[112px] pr-[60px] pb-[164px]">
           <div
             ref={containerRef}
             className="w-full max-w-[420px] flex items-end gap-[4px] rounded-[20px]"
@@ -122,7 +123,12 @@ export default function WhoWeAre() {
             />
           </div>
         </div>
-        <div></div>
+
+        <div className="flex gap-[4px] px-[12px] pb-[46px] w-full">
+          {Array.from({ length: 4 }).map((_, index) => (
+            <CardWithDots key={index} activeIndex={index} totalBars={`4`} />
+          ))}
+        </div>
       </div>
     </div>
   );
