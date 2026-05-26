@@ -53,18 +53,18 @@ export default function WhoWeAre() {
   }, []);
 
   return (
-    <div className="px-[12px] pb-[46px]" id="about-us">
+    <div className="px-[12px] lg:pb-[46px]" id="about-us">
       <div className="flex flex-col justify-center bg-[#0a0f15] rounded-bl-[12px] rounded-br-[12px]">
         <div className="max-w-[1440px] w-full mx-auto">
-          <div className="flex gap-[100px] pt-[120px] pl-[112px] pr-[60px] pb-[164px]">
+          <div className="flex flex-col xl:flex-row gap-[100px] py-[60px] px-[20px] lg:pt-[100px] xl:pt-[120px] lg:px-[40px] xl:pl-[112px] xl:pr-[60px] lg:pb-[120px] xl:pb-[164px]">
             <div
               ref={containerRef}
-              className="w-full max-w-[420px] flex items-end gap-[4px] rounded-[20px]"
+              className="h-auto w-full lg:max-w-[420px] flex items-center lg:items-end gap-[4px] rounded-[20px]"
             >
               {items.map((item, i) => (
                 <div
                   key={i}
-                  className="relative flex-1 min-w-[80px] rounded-b-[12px]"
+                  className="relative lg:flex-1 min-w-[80px] rounded-b-[12px]"
                   style={{
                     height: item.height,
                   }}
@@ -94,7 +94,7 @@ export default function WhoWeAre() {
               ))}
             </div>
 
-            <div className="h-min flex flex-col gap-[32px]">
+            <div className="h-min flex flex-col gap-[24px] lg:gap-[32px]">
               <SectionTag
                 heading={`/  Who we are`}
                 bgColor={`#222631`}
@@ -102,7 +102,7 @@ export default function WhoWeAre() {
                 animation={true}
               />
               <SectionHeading
-                fontSize={`46px`}
+                fontSize={`text-[32px] lg:text-[40px] xl:text-[46px]`}
                 color={`#fff`}
                 letterSpacing={`tracking-[-0.06em]`}
                 lineHeight={`leading-[1em]`}
@@ -110,11 +110,11 @@ export default function WhoWeAre() {
               />
               <SectionSmallHeading
                 color={`#bfc7d4`}
-                fontSize={`16px`}
+                fontSize={`text-[16px]`}
                 lineHeight={`leading-[1.4em]`}
                 letterSpacing={`tracking-[-0.02em]`}
                 text={`FlatWhite is a consulting partner for companies that demand both vision and execution. We turn strategic goals into operational reality and create value that lasts.`}
-                maxWidth={`440px`}
+                maxWidth={`max-w-[440px]`}
               />
               <CtaButton
                 bgColor={`#fff`}
@@ -124,9 +124,15 @@ export default function WhoWeAre() {
               />
             </div>
           </div>
-          <div className="flex gap-[4px] px-[12px] pb-[46px] w-full">
+
+          <div className="h-min flex flex-wrap gap-[4px] px-[12px] pb-[12px] lg:pb-[46px] w-full">
             {Array.from({ length: 4 }).map((_, index) => (
-              <CardWithDots key={index} activeIndex={index} totalBars={`4`} />
+              <div
+                key={index}
+                className="w-full lg:w-[calc(50%-2px)] xl:w-[calc(25%-4px)]"
+              >
+                <CardWithDots activeIndex={index} totalBars={`4`} />
+              </div>
             ))}
           </div>
         </div>

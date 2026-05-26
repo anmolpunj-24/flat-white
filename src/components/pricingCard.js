@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function PricingCard() {
   return (
-    <div className="flex flex-col items-start p-[24px] lg:p-[46px] gap-[32px] lg:gap-[46px] bg-[#d6d9e2] h-min rounded-[12px] max-w-[600px] w-full">
+    <div className="flex flex-col items-start p-[24px] lg:p-[46px] gap-[32px] lg:gap-[46px] bg-[#d6d9e2] h-min rounded-[12px] xl:max-w-[600px] w-full">
       <div className="flex flex-col gap-[24px]">
         <SectionTag
           heading={"Service cost"}
@@ -35,8 +35,8 @@ export default function PricingCard() {
         ))}
       </ul>
 
-      <div className="flex h-min items-center gap-[30px] justify-between w-full">
-        <h6 className="text-[18px] whitespace-pre-wrap break-words max-w-[300px] lg:max-w-[230px] font-[500] leading-[1.3em] tracking-[-0.04em]">
+      <div className="flex flex-col sm:flex-row h-min items-start sm:items-center gap-[30px] justify-between w-full">
+        <h6 className="text-[18px] whitespace-pre-wrap break-words max-w-[300px] xl:max-w-[230px] font-[500] leading-[1.3em] tracking-[-0.04em]">
           Premium consulting services with transparent costs and measurable
           value
         </h6>

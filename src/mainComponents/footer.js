@@ -174,7 +174,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex lg:flex-col lg:justify-between gap-[24px] lg:gap-0 sm:flex-col-reverse">
+          <div className="flex lg:flex-col lg:justify-between gap-[24px] lg:gap-0 flex-col-reverse">
             <button
               className="group flex justify-center lg:justify-end items-center gap-[10px] cursor-pointer"
               onClick={backToTop}
@@ -194,7 +194,7 @@ export default function Footer() {
               </div>
             </button>
 
-            <div className="flex gap-[12px] items-center sm:justify-center">
+            <div className="flex gap-[12px] items-center justify-center">
               {icons.map((ico, index) => (
                 <Link
                   href={ico?.link}

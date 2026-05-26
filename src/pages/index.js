@@ -20,14 +20,14 @@ export default function Home() {
 
       {/* who we are */}
       {/* left */}
-      <WhoWeAre />
+      {/* <WhoWeAre /> */}
 
       {/* our methods */}
       <OurMethods />
 
       {/* what we offer */}
       {/*  need to look into this when 25% also make it responsive */}
-      <WhatWeOffer />
+      {/* <WhatWeOffer /> */}
 
       {/* our process */}
       <OurProcess />
@@ -37,13 +37,12 @@ export default function Home() {
 
       {/* partnership */}
       {/* left */}
-      <Partnership />
+      {/* <Partnership /> */}
 
       {/* pricing */}
       <Pricing />
 
       {/* faq */}
-      {/* left and header */}
       <Faqs />
     </>
   );
