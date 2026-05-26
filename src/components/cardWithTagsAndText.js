@@ -1,6 +1,6 @@
 export default function CardWithTagsAndText() {
   return (
-    <div className="flex flex-col bg-[#f0f1f5] gap-[12px] p-[32px] rounded-[12px] h-min">
+    <div className="flex flex-col bg-[#f0f1f5] gap-[12px] p-[24px] lg:p-[32px] rounded-[12px] h-min">
       <div className="text-[12px] uppercase bg-[#fff] rounded-[99px] px-[12px] py-[6px] w-min h-min font-[600]">
         Strategy
       </div>

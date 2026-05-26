@@ -11,7 +11,7 @@ export default function FutureReadyBusiness() {
     <div className="px-[12px]">
       <div className="bg-[#0a0f15] rounded-tl-[12px] rounded-tr-[12px]">
         <div className="max-w-[1440px] w-full mx-auto">
-          <div className="h-min max-w-[1416px] flex flex-col gap-[48px] w-full pt-[92px] px-[112px] pb-[46px]">
+          <div className="h-min flex flex-col gap-[24px] lg:gap-[48px] w-full pt-[40px] lg:pt-[92px] px-[20px] lg:px-[40px] xl:px-[112px] pb-[46px]">
             <SectionTag
               heading={`/  Future-ready business`}
               bgColor={`#222631`}
@@ -19,7 +19,7 @@ export default function FutureReadyBusiness() {
               animation={true}
             />
             <SectionHeading
-              fontSize={`74px`}
+              fontSize={`text-[48px] lg:text-[64px] xl:text-[74px]`}
               color={`#fff`}
               letterSpacing={`tracking-[-0.06em]`}
               lineHeight={`leading-[1em]`}
@@ -27,14 +27,14 @@ export default function FutureReadyBusiness() {
               text={`Empowering сompanies to grow smarter and faster`}
             />
 
-            <div className="flex justify-between">
+            <div className="flex flex-col lg:flex-row justify-between gap-[32px] lg:gap-0">
               <SectionSmallHeading
                 color={`#bfc7d4`}
-                fontSize={`16px`}
+                fontSize={`text-[16px]`}
                 lineHeight={`leading-[1.4em]`}
                 letterSpacing={`tracking-[-0.02em]`}
                 text={`FlatWhite partners with leadership teams to redefine strategy, streamline operations and unlock sustainable growth. We translate ambition into an actionable roadmap using data, technology and close collaboration.`}
-                maxWidth={`410px`}
+                maxWidth={`max-w-[410px]`}
               />
 
               <div className="flex flex-col items-end text-right h-min gap-[16px]">
@@ -77,7 +77,7 @@ export default function FutureReadyBusiness() {
             </div>
           </div>
 
-          <div className="h-min items-center p-[46px]">
+          <div className="h-min items-center p-[20px] lg:p-[46px]">
             <video
               src="/videos/people.mp4"
               autoPlay

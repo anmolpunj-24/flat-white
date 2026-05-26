@@ -72,7 +72,7 @@ export default function Footer() {
             letterSpacing={`tracking-[-0.02em]`}
             align={`center`}
             text={`Learn how systematic methods can support better portfolio outcomes.`}
-            maxWidth={`390px`}
+            maxWidth={`max-w-[390px]`}
           />
 
           <form className="max-w-[340px] w-full relative">

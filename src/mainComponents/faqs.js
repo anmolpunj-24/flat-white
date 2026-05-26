@@ -13,7 +13,7 @@ export default function Faqs() {
             heading={`/  Frequently asked questions`}
             bgColor={`#747e90`}
             textColor={`#fff`}
-            animation={true}
+            animation={true} 
           />
 
           <SectionHeading

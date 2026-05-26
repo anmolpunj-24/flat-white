@@ -10,11 +10,10 @@ export default function SectionSmallHeading({
 }) {
   return (
     <div
-      className={`${fontSize} ${lineHeight} ${letterSpacing} whitespace-pre-wrap break-words`}
+      className={`${fontSize} ${lineHeight} ${letterSpacing} ${maxWidth} whitespace-pre-wrap break-words`}
       style={{
         color: color,
         textAlign: align,
-        maxWidth: maxWidth,
         fontWeight: fontWeight,
       }}
     >

@@ -8,8 +8,13 @@ import SectionTag from "./sectionTag";
 
 export default function CardWithSmallImageAndTags() {
   return (
-    <div className="flex flex-col content-between h-min bg-[#f0f1f5] rounded-[12px] w-full min-h-[500px] p-[32px]">
-      <Image src={`/assets/react.svg`} height={64} width={64} alt="icon" />
+    <div className="flex flex-col gap-[40px] lg:gap-0 lg:content-between h-min bg-[#f0f1f5] rounded-[12px] w-full min-h-unset lg:min-h-[500px] p-[24px] lg:p-[32px]">
+      <Image
+        src={`/assets/react.svg`}
+        height={64}
+        width={64}
+        alt="icon"
+      />
 
       <div className="h-min flex flex-col w-fill gap-[12px] p-0 mt-auto">
         <SectionTag
@@ -18,7 +23,7 @@ export default function CardWithSmallImageAndTags() {
           textColor={`#111`}
         />
         <SectionHeading
-          fontSize={`24px`}
+          fontSize={`text-[24px]`}
           color={`#111`}
           letterSpacing={`tracking-[-0.06em]`}
           lineHeight={`leading-[1.2em]`}
@@ -26,7 +31,7 @@ export default function CardWithSmallImageAndTags() {
         />
         <SectionSmallHeading
           color={`#657084`}
-          fontSize={`16px`}
+          fontSize={`text-[16px]`}
           lineHeight={`leading-[1.4em]`}
           letterSpacing={`tracking-[-0.02em]`}
           text={`FlatWhite uses data and analytics to guide strategy and deliver tangible results.`}

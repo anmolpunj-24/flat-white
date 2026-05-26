@@ -19,12 +19,14 @@ export default function Home() {
       <FutureReadyBusiness />
 
       {/* who we are */}
+      {/* left */}
       <WhoWeAre />
 
       {/* our methods */}
       <OurMethods />
 
       {/* what we offer */}
+      {/*  need to look into this when 25% also make it responsive */}
       <WhatWeOffer />
 
       {/* our process */}
@@ -34,12 +36,14 @@ export default function Home() {
       <OurExpertise />
 
       {/* partnership */}
+      {/* left */}
       <Partnership />
 
       {/* pricing */}
       <Pricing />
 
       {/* faq */}
+      {/* left and header */}
       <Faqs />
     </>
   );

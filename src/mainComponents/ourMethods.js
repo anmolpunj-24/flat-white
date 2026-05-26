@@ -7,7 +7,10 @@ import SectionTag from "@/components/sectionTag";
 export default function OurMethods() {
   return (
     <div className="max-w-[1440px] mx-auto">
-      <div className="flex flex-col gap-[146px] py-[46px] px-[124px] h-min" id="our-methods">
+      <div
+        className="flex flex-col gap-[40px] lg:gap-[100px] xl:gap-[146px] pt-[46px] pb-[32px] lg:py-[46px] px-[20px] lg:px-[40px] xl:px-[124px] h-min"
+        id="our-methods"
+      >
         <SectionTag
           heading={`/  Our methods`}
           bgColor={`#e0e5eb`}
@@ -16,7 +19,7 @@ export default function OurMethods() {
         />
 
         <SectionHeading
-          fontSize={`64px`}
+          fontSize={`text-[36px] lg:text-[60px] xl:text-[64px]`}
           color={`#0a0f15`}
           letterSpacing={`tracking-[-0.06em]`}
           lineHeight={`leading-[1em]`}
@@ -27,9 +30,14 @@ export default function OurMethods() {
 
       <Divider bgColor={`#f0f1f5`} />
 
-      <div className="h-min flex gap-[4px] w-full px-[12px] pt-[46px] pb-[92px]">
+      <div className="h-min flex flex-wrap gap-[4px] w-full px-[12px] pt-[32px] lg:pt-[46px] pb-[46px] lg:pb-[92px]">
         {Array.from({ length: 3 }).map((_, index) => (
-          <CardWithSmallImageAndTags key={index} />
+          <div
+            key={index}
+            className="w-full lg:w-[calc(50%-2px)] xl:w-[calc(33.333%-3px)]"
+          >
+            <CardWithSmallImageAndTags />
+          </div>
         ))}
       </div>
     </div>
