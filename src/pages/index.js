@@ -1,6 +1,3 @@
-// tailwind intersect import
-import "tailwindcss-intersect";
-
 // components import
 import Faqs from "@/mainComponents/faqs";
 import FutureReadyBusiness from "@/mainComponents/futureReadyBusiness";
@@ -16,34 +13,32 @@ export default function Home() {
   return (
     <>
       {/* future ready business */}
-      <FutureReadyBusiness />
+      {/* <FutureReadyBusiness /> */}
 
       {/* who we are */}
-      {/* left */}
-      {/* <WhoWeAre /> */}
+      <WhoWeAre />
 
       {/* our methods */}
-      <OurMethods />
+      {/* <OurMethods /> */}
 
       {/* what we offer */}
       {/*  need to look into this when 25% also make it responsive */}
-      {/* <WhatWeOffer /> */}
+      <WhatWeOffer />
 
       {/* our process */}
-      <OurProcess />
+      {/* <OurProcess /> */}
 
       {/* our experties */}
-      <OurExpertise />
+      {/* <OurExpertise /> */}
 
       {/* partnership */}
-      {/* left */}
-      {/* <Partnership /> */}
+      <Partnership />
 
       {/* pricing */}
-      <Pricing />
+      {/* <Pricing /> */}
 
       {/* faq */}
-      <Faqs />
+      {/* <Faqs /> */}
     </>
   );
 }

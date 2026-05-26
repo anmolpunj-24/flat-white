@@ -131,7 +131,7 @@ export default function WhoWeAre() {
                 key={index}
                 className="w-full lg:w-[calc(50%-2px)] xl:w-[calc(25%-4px)]"
               >
-                <CardWithDots activeIndex={index} totalBars={`4`} />
+                <CardWithDots activeIndex={index} totalBars={`4`} value={`32`}/>
               </div>
             ))}
           </div>
