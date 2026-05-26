@@ -23,7 +23,7 @@ export default function FutureReadyBusiness() {
               color={`#fff`}
               letterSpacing={`tracking-[-0.06em]`}
               lineHeight={`leading-[1em]`}
-              maxWidth={`850px`}
+              maxWidth={`max-w-[850px]`}
               text={`Empowering сompanies to grow smarter and faster`}
             />
 

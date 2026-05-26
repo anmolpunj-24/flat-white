@@ -19,7 +19,7 @@ export default function WhatWeOfferCard({ index, lastIndex }) {
       onClick={expandCard}
     >
       <div className="group w-full flex gap-[40px] items-start pt-[20px]">
-        <p className="w-[120px] h-min text-[12px] font-[600]">/ 001</p>
+        <p className="xl:w-[120px] h-min text-[12px] font-[600]">/ 001</p>
 
         <div className="flex-1 overflow-hidden">
           <p
@@ -58,7 +58,7 @@ export default function WhatWeOfferCard({ index, lastIndex }) {
             <div className="overflow-hidden">
               <div
                 className={`
-                  flex gap-[40px]
+                  flex flex-col lg:flex-row gap-[24px] lg:gap-[40px]
                   transition-all
                   duration-700
                   ease-in-out
@@ -71,7 +71,7 @@ export default function WhatWeOfferCard({ index, lastIndex }) {
               >
                 <div className="relative flex-1 overflow-hidden max-w-[300px]">
                   <Image
-                    className="object-cover rounded-[12px]"
+                    className="object-cover rounded-[12px] w-[300px] h-[195px] lg:h-[107px] lg:w-[164px]"
                     src="/assets/people1.avif"
                     height={107}
                     width={164}

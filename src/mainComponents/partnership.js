@@ -11,8 +11,8 @@ import Image from "next/image";
 
 export default function Partnership() {
   return (
-    <div className="h-min items-center pt-[78px] px-[12px] pb-[0px] relative">
-      <div className="relative rounded-[12px] overflow-hidden min-h-[720px] w-full">
+    <div className="h-min items-center pt-[60px] lg:pt-[78px] px-[6px] lg:px-[12px] pb-[0px] relative">
+      <div className="relative rounded-[12px] overflow-hidden min-h-[500px] lg:min-h-[720px] w-full">
         <video
           src="/videos/partnership.mp4"
           autoPlay
@@ -23,18 +23,18 @@ export default function Partnership() {
         />
         <div className="absolute inset-0 bg-[#0a0f15]/50"></div>
 
-        <div className="relative h-min inset-0 z-10 flex flex-col items-center justify-center gap-[32px] py-[180px] px-[124px]">
+        <div className="relative h-min inset-0 z-10 flex flex-col items-center justify-center gap-[32px] py-[80px] lg:py-[120px] xl:py-[180px] px-[20px] lg:px-[124px]">
           <SectionHeading
-            fontSize={`64px`}
+            fontSize={`text-[36px] lg:text-[60px] xl:text-[64px]`}
             color={`#fff`}
             letterSpacing={`tracking-[-0.02em]`}
             lineHeight={`leading-[1em]`}
-            maxWidth={`680px`}
+            maxWidth={`w-full xl:max-w-[680px]`}
             text={`Building partnerships that drive growth`}
             align={`center`}
           />
 
-          <div className="flex gap-[4px] items-center justify-center">
+          <div className="flex flex-wrap lg:flex-nowrap gap-[4px] items-center justify-center">
             {Array.from({ length: 3 }).map((_, index) => (
               <span
                 key={index}
@@ -47,12 +47,12 @@ export default function Partnership() {
 
           <SectionSmallHeading
             color={`#f0f1f5`}
-            fontSize={`18px`}
+            fontSize={`text-[18px]`}
             lineHeight={`leading-[1.3em]`}
             letterSpacing={`tracking-[-0.02em]`}
             align={`center`}
             text={`We work closely with clients to deliver results efficiently and effectively. By embedding ourselves in their teams, we ensure strategies are actionable, sustainable, and create long-term value across the organization.`}
-            maxWidth={`460px`}
+            maxWidth={`max-w-[460px]`}
             fontWeight={`500`}
           />
 
@@ -98,7 +98,8 @@ export default function Partnership() {
               ))}
             </div>
           </div>
-          <div className="flex gap-[40px] h-min pt-[92px] px-[124px] pb-[46px] justify-between">
+
+          <div className="flex flex-col xl:flex-row gap-[40px] lg:gap-[100px] xl:gap-[40px] h-min pt-[60px] lg:pt-[92px] px-[20px] lg:px-[40px] xl:px-[124px] pb-[32px] lg:pb-[46px] justify-between">
             <SectionTag
               heading={`/  Our experts`}
               bgColor={`#222631`}
@@ -107,16 +108,18 @@ export default function Partnership() {
             />
 
             <SectionHeading
-              fontSize={`64px`}
+              fontSize={`text-[36px] lg:text-[60px] xl:text-[64px]`}
               color={`#fff`}
               letterSpacing={`tracking-[-0.06em]`}
               lineHeight={`leading-[1em]`}
               text={`The team driving strategy, innovation and growth`}
-              maxWidth={`720px`}
+              maxWidth={`max-w-[720px]`}
             />
           </div>
+
           <Divider bgColor={`#222631`} />
-          <div className="grid grid-cols-[repeat(2,minmax(200px,1fr))] justify-center gap-[4px] h-min px-[124px] py-[92px]">
+
+          <div className="flex flex-col lg:grid lg:grid-cols-[repeat(2,minmax(200px,1fr))] justify-center gap-[4px] h-min px-[20px] pt-[32px] pb-[20px] lg:px-[40px] xl:px-[124px] py-[92px]">
             {Array.from({ length: 6 }).map((_, index) => (
               <TeamCard key={index} />
             ))}

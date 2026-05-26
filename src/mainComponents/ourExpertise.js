@@ -20,7 +20,7 @@ export default function OurExpertise() {
           color={`#0a0f15`}
           letterSpacing={`tracking-[-0.06em]`}
           lineHeight={`leading-[1em]`}
-          maxWidth={`800px`}
+          maxWidth={`max-w-[800px]`}
           text={`Where strategy, operations and innovation meet measurable results`}
         />
       </div>

@@ -13,32 +13,31 @@ export default function Home() {
   return (
     <>
       {/* future ready business */}
-      {/* <FutureReadyBusiness /> */}
+      <FutureReadyBusiness />
 
       {/* who we are */}
       <WhoWeAre />
 
       {/* our methods */}
-      {/* <OurMethods /> */}
+      <OurMethods />
 
       {/* what we offer */}
-      {/*  need to look into this when 25% also make it responsive */}
       <WhatWeOffer />
 
       {/* our process */}
-      {/* <OurProcess /> */}
+      <OurProcess />
 
       {/* our experties */}
-      {/* <OurExpertise /> */}
+      <OurExpertise />
 
       {/* partnership */}
       <Partnership />
 
       {/* pricing */}
-      {/* <Pricing /> */}
+      <Pricing />
 
       {/* faq */}
-      {/* <Faqs /> */}
+      <Faqs />
     </>
   );
 }

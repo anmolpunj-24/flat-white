@@ -7,8 +7,8 @@ import SectionTag from "@/components/sectionTag";
 export default function Faqs() {
   return (
     <div className="px-[12px] pb-[12px]">
-      <div className="relative h-min bg-[#657084] w-full">
-        <div className="mx-auto max-w-[1440px] items-center flex flex-col gap-[40px] lg:gap-[46px] pt-[80px] lg:pt-[100] xl:pt-[164px] px-[20px] lg:px-[40px] xl:px-[112px] pb-[100px] lg:pb-[160px] xl:pb-[254px] rounded-[12px]">
+      <div className="relative h-min bg-[#657084] w-full rounded-[12px]">
+        <div className="mx-auto max-w-[1440px] items-center flex flex-col gap-[40px] lg:gap-[46px] pt-[80px] lg:pt-[100] xl:pt-[164px] px-[20px] lg:px-[40px] xl:px-[112px] pb-[100px] lg:pb-[160px] xl:pb-[254px]">
           <SectionTag
             heading={`/  Frequently asked questions`}
             bgColor={`#747e90`}
@@ -21,7 +21,7 @@ export default function Faqs() {
             color={`#fff`}
             letterSpacing={`tracking-[-0.06em]`}
             lineHeight={`leading-[1em]`}
-            maxWidth={`800px`}
+            maxWidth={`max-w-[800px]`}
             text={`Straightforward answers to help you make informed choices.`}
             align={`center`}
           />

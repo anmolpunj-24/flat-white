@@ -23,7 +23,7 @@ export default function OurMethods() {
           color={`#0a0f15`}
           letterSpacing={`tracking-[-0.06em]`}
           lineHeight={`leading-[1em]`}
-          maxWidth={`800px`}
+          maxWidth={`max-w-[800px]`}
           text={`Bridging strategy, operations and delivering tangible business growth`}
         />
       </div>

@@ -20,7 +20,7 @@ export default function CardWithBigImage() {
         <h5 className="whitespace-pre-wrap break-words text-[#0a0f15] text-[24px] tracking-[-0.06em]">
           Transform your business today
         </h5>
-        <p className="whitespace-pre-wrap break-words text-[#747e90] text-[16px] tracking-[-0.02em] font-medium">
+        <p className="whitespace-pre-wrap break-words text-[#747e90] text-[16px] tracking-[-0.02em]">
           FlatWhite combines strategy, operations and innovation to help
           companies grow faster and more efficiently. Explore how our approach
           can unlock new opportunities for your organization.

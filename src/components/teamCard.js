@@ -29,8 +29,8 @@ export default function TeamCard() {
         </div>
       )}
 
-      <div className="p-[32px] flex flex-col justify-between rounded-[12px] h-full w-full bg-[#ffffff0a] min-h-[500px]">
-        <div className="flex h-min gap-[12px] pb-[42px] items-center justify-between">
+      <div className="p-[32px] flex flex-col lg:justify-between rounded-[12px] h-full w-full bg-[#ffffff0a] lg:min-h-[500px]">
+        <div className="flex flex-col flex-col-reverse sm:flex-row h-min gap-[12px] pb-[42px] items-start sm:items-center justify-between">
           <div className="items-center gap-[10px]">
             <h4 className="text-[32px] text-white tracking-[-0.06em]">
               Emma Carter
