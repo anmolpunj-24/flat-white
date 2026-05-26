@@ -12,11 +12,18 @@ import Image from "next/image";
 export default function Partnership() {
   return (
     <div className="h-min items-center pt-[78px] px-[12px] pb-[0px] relative">
-      <div className="rounded-[12px] overflow-hidden relative">
-        <video src="/videos/partnership.mp4" autoPlay loop muted playsInline />
-        <div className="absolute inset-0 bg-[#0a0f15] opacity-[0.5]"></div>
+      <div className="relative rounded-[12px] overflow-hidden min-h-[720px] w-full">
+        <video
+          src="/videos/partnership.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[#0a0f15]/50"></div>
 
-        <div className="h-min inset-0 z-10 flex flex-col items-center justify-center gap-[32px] py-[180px] px-[124px] absolute">
+        <div className="relative h-min inset-0 z-10 flex flex-col items-center justify-center gap-[32px] py-[180px] px-[124px]">
           <SectionHeading
             fontSize={`64px`}
             color={`#fff`}
@@ -59,62 +66,61 @@ export default function Partnership() {
       </div>
 
       <div className="flex flex-col z-10 bg-[#0a0f15] -mt-[8px] rounded-bl-[12px] rounded-br-[12px]">
-        {/* marquee */}
-        <div className="relative flex overflow-x-hidden max-w-[920px] text-white mx-auto w-full pt-[46px] px-[124px] pb-[124px] [mask-image:linear-gradient(to_right,rgba(0,0,0,0)_0%,rgb(0,0,0)_12.5%,rgb(0,0,0)_87.5%,rgba(0,0,0,0)_100%)]">
-          <div className="flex h-[140px] w-[240px] min-w-full shrink-0 justify-around items-center animate-marquee whitespace-nowrap">
-            {Array.from({ length: 3 }).map((_, index) => (
-              <Image
-                key={index}
-                src={`/assets/logoipsum.svg`}
-                alt="logo"
-                height={29}
-                width={121}
-                className="brightness-0 invert"
-              />
+        <div className="max-w-[1440px] w-full mx-auto">
+          {/* marquee */}
+          <div className="relative flex overflow-x-hidden max-w-[920px] text-white mx-auto w-full pt-[46px] px-[124px] pb-[124px] [mask-image:linear-gradient(to_right,rgba(0,0,0,0)_0%,rgb(0,0,0)_12.5%,rgb(0,0,0)_87.5%,rgba(0,0,0,0)_100%)]">
+            <div className="flex h-[140px] w-[240px] min-w-full shrink-0 justify-around items-center animate-marquee whitespace-nowrap">
+              {Array.from({ length: 3 }).map((_, index) => (
+                <Image
+                  key={index}
+                  src={`/assets/logoipsum.svg`}
+                  alt="logo"
+                  height={29}
+                  width={121}
+                  className="brightness-0 invert"
+                />
+              ))}
+            </div>
+
+            <div
+              className="flex shrink-0 h-[140px] w-[240px] min-w-full justify-around items-center animate-marquee whitespace-nowrap"
+              aria-hidden="true"
+            >
+              {Array.from({ length: 3 }).map((_, index) => (
+                <Image
+                  key={index}
+                  src={`/assets/logoipsum.svg`}
+                  alt="logo"
+                  height={29}
+                  width={121}
+                  className="brightness-0 invert"
+                />
+              ))}
+            </div>
+          </div>
+          <div className="flex gap-[40px] h-min pt-[92px] px-[124px] pb-[46px] justify-between">
+            <SectionTag
+              heading={`/  Our experts`}
+              bgColor={`#222631`}
+              textColor={"#fff"}
+              animation={true}
+            />
+
+            <SectionHeading
+              fontSize={`64px`}
+              color={`#fff`}
+              letterSpacing={`tracking-[-0.06em]`}
+              lineHeight={`leading-[1em]`}
+              text={`The team driving strategy, innovation and growth`}
+              maxWidth={`720px`}
+            />
+          </div>
+          <Divider bgColor={`#222631`} />
+          <div className="grid grid-cols-[repeat(2,minmax(200px,1fr))] justify-center gap-[4px] h-min px-[124px] py-[92px]">
+            {Array.from({ length: 6 }).map((_, index) => (
+              <TeamCard key={index} />
             ))}
           </div>
-
-          <div
-            className="flex shrink-0 h-[140px] w-[240px] min-w-full justify-around items-center animate-marquee whitespace-nowrap"
-            aria-hidden="true"
-          >
-            {Array.from({ length: 3 }).map((_, index) => (
-              <Image
-                key={index}
-                src={`/assets/logoipsum.svg`}
-                alt="logo"
-                height={29}
-                width={121}
-                className="brightness-0 invert"
-              />
-            ))}
-          </div>
-        </div>
-
-        <div className="flex gap-[40px] h-min pt-[92px] px-[124px] pb-[46px] justify-between">
-          <SectionTag
-            heading={`/  Our experts`}
-            bgColor={`#222631`}
-            textColor={"#fff"}
-            animation={true}
-          />
-
-          <SectionHeading
-            fontSize={`64px`}
-            color={`#fff`}
-            letterSpacing={`tracking-[-0.06em]`}
-            lineHeight={`leading-[1em]`}
-            text={`The team driving strategy, innovation and growth`}
-            maxWidth={`720px`}
-          />
-        </div>
-
-        <Divider bgColor={`#222631`} />
-
-        <div className="grid grid-cols-[repeat(2,minmax(200px,1fr))] justify-center gap-[4px] h-min px-[124px] py-[92px]">
-          {Array.from({ length: 6 }).map((_, index) => (
-            <TeamCard key={index} />
-          ))}
         </div>
       </div>
     </div>

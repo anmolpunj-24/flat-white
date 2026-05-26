@@ -48,7 +48,7 @@ export default function WhatWeOffer() {
               letterSpacing={`tracking-[-0.06em]`}
               lineHeight={`leading-[1.2em]`}
               text={`Delivering impact with confidence`}
-            />
+            /> 
             <SectionSmallHeading
               color={`#747e90`}
               fontSize={`16px`}

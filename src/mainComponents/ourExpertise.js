@@ -6,7 +6,7 @@ import SectionTag from "@/components/sectionTag";
 
 export default function OurExpertise() {
   return (
-    <>
+    <div className="w-full max-w-[1440px] mx-auto">
       <div className="flex flex-col gap-[146px] pt-[92px] px-[124px] pb-[46px] h-min">
         <SectionTag
           heading={`/  Our expertise`}
@@ -32,6 +32,6 @@ export default function OurExpertise() {
           <CardWithTagsAndText key={index} />
         ))}
       </div>
-    </>
+    </div>
   );
 }

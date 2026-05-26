@@ -55,79 +55,80 @@ export default function WhoWeAre() {
   return (
     <div className="px-[12px] pb-[46px]" id="about-us">
       <div className="flex flex-col justify-center bg-[#0a0f15] rounded-bl-[12px] rounded-br-[12px]">
-        <div className="flex gap-[100px] pt-[120px] pl-[112px] pr-[60px] pb-[164px]">
-          <div
-            ref={containerRef}
-            className="w-full max-w-[420px] flex items-end gap-[4px] rounded-[20px]"
-          >
-            {items.map((item, i) => (
-              <div
-                key={i}
-                className="relative flex-1 min-w-[80px] rounded-b-[12px]"
-                style={{
-                  height: item.height,
-                }}
-              >
-                {/* outer borders */}
-                <div className="absolute inset-0 border-x border-b border-[#1d2633] rounded-b-[18px]" />
+        <div className="max-w-[1440px] w-full mx-auto">
+          <div className="flex gap-[100px] pt-[120px] pl-[112px] pr-[60px] pb-[164px]">
+            <div
+              ref={containerRef}
+              className="w-full max-w-[420px] flex items-end gap-[4px] rounded-[20px]"
+            >
+              {items.map((item, i) => (
+                <div
+                  key={i}
+                  className="relative flex-1 min-w-[80px] rounded-b-[12px]"
+                  style={{
+                    height: item.height,
+                  }}
+                >
+                  {/* outer borders */}
+                  <div className="absolute inset-0 border-x border-b border-[#1d2633] rounded-b-[18px]" />
 
-                {/* inner backdrop */}
-                <div className="absolute inset-x-[1px] bottom-[1px] top-[30px] bg-[#13171c] rounded-b-[16px]" />
+                  {/* inner backdrop */}
+                  <div className="absolute inset-x-[1px] bottom-[1px] top-[30px] bg-[#13171c] rounded-b-[16px]" />
 
-                {/* top border lines */}
-                <div className="absolute top-0 left-0 w-[1px] h-[30px]" />
-                <div className="absolute top-0 right-0 w-[1px] h-[30px] bg-[#1d2633]" />
+                  {/* top border lines */}
+                  <div className="absolute top-0 left-0 w-[1px] h-[30px]" />
+                  <div className="absolute top-0 right-0 w-[1px] h-[30px] bg-[#1d2633]" />
 
-                {/* bullet */}
-                <div className="absolute left-1/2 top-[-50px] -translate-x-1/2">
-                  <div className="w-[10px] h-[10px] rounded-[3px] bg-[#222c3a]" />
+                  {/* bullet */}
+                  <div className="absolute left-1/2 top-[-50px] -translate-x-1/2">
+                    <div className="w-[10px] h-[10px] rounded-[3px] bg-[#222c3a]" />
+                  </div>
+
+                  {/* title */}
+                  <div className="absolute left-1/2 top-[-30px] -translate-x-1/2">
+                    <p className="uppercase text-white font-[700] text-[12px] whitespace-nowrap">
+                      {item.title}
+                    </p>
+                  </div>
                 </div>
+              ))}
+            </div>
 
-                {/* title */}
-                <div className="absolute left-1/2 top-[-30px] -translate-x-1/2">
-                  <p className="uppercase text-white font-[700] text-[12px] whitespace-nowrap">
-                    {item.title}
-                  </p>
-                </div>
-              </div>
+            <div className="h-min flex flex-col gap-[32px]">
+              <SectionTag
+                heading={`/  Who we are`}
+                bgColor={`#222631`}
+                textColor={`#fff`}
+                animation={true}
+              />
+              <SectionHeading
+                fontSize={`46px`}
+                color={`#fff`}
+                letterSpacing={`tracking-[-0.06em]`}
+                lineHeight={`leading-[1em]`}
+                text={`Strategic transformation, enabling businesses to scale with clarity and consistent performance improvement.`}
+              />
+              <SectionSmallHeading
+                color={`#bfc7d4`}
+                fontSize={`16px`}
+                lineHeight={`leading-[1.4em]`}
+                letterSpacing={`tracking-[-0.02em]`}
+                text={`FlatWhite is a consulting partner for companies that demand both vision and execution. We turn strategic goals into operational reality and create value that lasts.`}
+                maxWidth={`440px`}
+              />
+              <CtaButton
+                bgColor={`#fff`}
+                textColor={`#111`}
+                ctaText={`Learn more`}
+                padding={`18px 24px`}
+              />
+            </div>
+          </div>
+          <div className="flex gap-[4px] px-[12px] pb-[46px] w-full">
+            {Array.from({ length: 4 }).map((_, index) => (
+              <CardWithDots key={index} activeIndex={index} totalBars={`4`} />
             ))}
           </div>
-
-          <div className="h-min flex flex-col gap-[32px]">
-            <SectionTag
-              heading={`/  Who we are`}
-              bgColor={`#222631`}
-              textColor={`#fff`}
-              animation={true}
-            />
-            <SectionHeading
-              fontSize={`46px`}
-              color={`#fff`}
-              letterSpacing={`tracking-[-0.06em]`}
-              lineHeight={`leading-[1em]`}
-              text={`Strategic transformation, enabling businesses to scale with clarity and consistent performance improvement.`}
-            />
-            <SectionSmallHeading
-              color={`#bfc7d4`}
-              fontSize={`16px`}
-              lineHeight={`leading-[1.4em]`}
-              letterSpacing={`tracking-[-0.02em]`}
-              text={`FlatWhite is a consulting partner for companies that demand both vision and execution. We turn strategic goals into operational reality and create value that lasts.`}
-              maxWidth={`440px`}
-            />
-            <CtaButton
-              bgColor={`#fff`}
-              textColor={`#111`}
-              ctaText={`Learn more`}
-              padding={`18px 24px`}
-            />
-          </div>
-        </div>
-
-        <div className="flex gap-[4px] px-[12px] pb-[46px] w-full">
-          {Array.from({ length: 4 }).map((_, index) => (
-            <CardWithDots key={index} activeIndex={index} totalBars={`4`} />
-          ))}
         </div>
       </div>
     </div>

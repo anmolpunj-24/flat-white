@@ -6,7 +6,7 @@ import SectionTag from "@/components/sectionTag";
 
 export default function OurMethods() {
   return (
-    <>
+    <div className="max-w-[1440px] mx-auto">
       <div className="flex flex-col gap-[146px] py-[46px] px-[124px] h-min" id="our-methods">
         <SectionTag
           heading={`/  Our methods`}
@@ -32,6 +32,6 @@ export default function OurMethods() {
           <CardWithSmallImageAndTags key={index} />
         ))}
       </div>
-    </>
+    </div>
   );
 }
