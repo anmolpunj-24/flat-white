@@ -18,11 +18,11 @@ export default function WhoWeAre() {
   const containerRef = useRef(null);
 
   const items = [
-    { title: "Analysis", height: "72%" },
-    { title: "Market", height: "27%" },
-    { title: "Growth", height: "86%" },
-    { title: "Strategy", height: "52%" },
-    { title: "Planning", height: "38%" },
+    { title: "Analysis", height: "82%" },
+    { title: "Market", height: "37%" },
+    { title: "Growth", height: "96%" },
+    { title: "Strategy", height: "62%" },
+    { title: "Planning", height: "48%" },
   ];
 
   useEffect(() => {
@@ -59,12 +59,12 @@ export default function WhoWeAre() {
           <div className="flex flex-col xl:flex-row gap-[100px] py-[60px] px-[20px] lg:pt-[100px] xl:pt-[120px] lg:px-[40px] xl:pl-[112px] xl:pr-[60px] lg:pb-[120px] xl:pb-[164px]">
             <div
               ref={containerRef}
-              className="h-auto w-full lg:max-w-[420px] flex items-center lg:items-end gap-[4px] rounded-[20px]"
+              className="flex max-w-[440px] w-full h-[320px] sm:h-[400px] xl:h-auto items-end justify-center gap-[4px] rounded-[20px] mx-auto"
             >
               {items.map((item, i) => (
                 <div
                   key={i}
-                  className="relative lg:flex-1 min-w-[80px] rounded-b-[12px]"
+                  className="relative flex-1 min-w-0 rounded-b-[12px]"
                   style={{
                     height: item.height,
                   }}
@@ -76,17 +76,17 @@ export default function WhoWeAre() {
                   <div className="absolute inset-x-[1px] bottom-[1px] top-[30px] bg-[#13171c] rounded-b-[16px]" />
 
                   {/* top border lines */}
-                  <div className="absolute top-0 left-0 w-[1px] h-[30px]" />
+                  <div className="absolute top-0 left-0 w-[1px] h-[30px] bg-[#1d2633]" />
                   <div className="absolute top-0 right-0 w-[1px] h-[30px] bg-[#1d2633]" />
 
                   {/* bullet */}
-                  <div className="absolute left-1/2 top-[-50px] -translate-x-1/2">
-                    <div className="w-[10px] h-[10px] rounded-[3px] bg-[#222c3a]" />
+                  <div className="absolute left-1/2 top-[-36px] sm:top-[-50px] -translate-x-1/2">
+                    <div className="w-[8px] h-[8px] sm:w-[10px] sm:h-[10px] rounded-[3px] bg-[#222c3a]" />
                   </div>
 
                   {/* title */}
-                  <div className="absolute left-1/2 top-[-30px] -translate-x-1/2">
-                    <p className="uppercase text-white font-[700] text-[12px] whitespace-nowrap">
+                  <div className="absolute left-1/2 top-[-22px] sm:top-[-30px] -translate-x-1/2">
+                    <p className="uppercase text-white font-[700] text-[10px] sm:text-[12px] whitespace-nowrap">
                       {item.title}
                     </p>
                   </div>
