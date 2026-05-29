@@ -7,7 +7,7 @@ import SectionHeading from "./sectionHeading";
 import SectionSmallHeading from "./sectionSmallHeading";
 import SectionTag from "./sectionTag";
 
-export default function CardWithSmallImageAndTags({ hover = false }) {
+export default function CardWithSmallImageAndTags({ hover }) {
   return (
     <div
       className={`${hover ? "group cursor-pointer" : ""} flex flex-col gap-[40px] lg:gap-0 lg:content-between h-min bg-[#f0f1f5] rounded-[12px] w-full min-h-unset lg:min-h-[500px] p-[24px] lg:p-[32px]`}
@@ -16,10 +16,10 @@ export default function CardWithSmallImageAndTags({ hover = false }) {
         <Image src={`/assets/react.svg`} height={64} width={64} alt="icon" />
         <Link
           href={`/service-detail`}
-          className={`inline-flex items-center gap-[8px] bg-[#111] text-[#fff] text-[14px] font-[600] rounded-[99px] px-[16px] py-[11px] shadow-[0_4px_14px_rgba(0,0,0,0.12)] hover:bg-[#222  hover:shadow-[0_8px_24px_rgba(0,0,0,0.18)  transition-all duration-300 ease-out transform ${
+          className={`inline-flex items-center gap-[8px] bg-[#111] text-[#fff] text-[14px] font-[600] rounded-[99px] px-[16px] py-[11px] shadow-[0_4px_14px_rgba(0,0,0,0.12)] hover:bg-[#222] hover:shadow-[0_8px_24px_rgba(0,0,0,0.18)] transition-all duration-300 ease-out transform ${
             hover
               ? "opacity-100 translate-x-0 lg:translate-x-[20px] lg:opacity-0 lg:group-hover:translate-x-0 lg:group-hover:opacity-100"
-              : "hidden"
+              : "hidden opacity-0"
           }`}
         >
           <span>Learn More</span>
