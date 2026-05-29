@@ -9,18 +9,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function Header() {
-  let ele = ["About Us", "Services", "Process", "Pricing"];
-
-  let toSection = (e, el) => {
-    e.preventDefault();
-    if (typeof window !== "undefined") {
-      const id = el.toLowerCase().replace(/\s+/g, "-");
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  };
+  let ele = ["About Us", "Services", "Blogs", "Testimonials"];
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -68,18 +57,17 @@ export default function Header() {
         <div className="hidden lg:flex flex-grow items-center justify-between h-min gap-[24px]">
           <div className="flex items-center gap-[24px] w-min h-min">
             {ele.map((el, index) => (
-              <a
+              <Link
                 key={index}
-                href={`#${el.toLowerCase().replace(/\s+/g, "-")}`}
+                href={`/${el.toLowerCase().replace(/\s+/g, "-")}`}
                 className="group flex flex-col w-fit hover:cursor-pointer"
-                onClick={(e) => toSection(e, el)}
               >
                 <p className="whitespace-pre text-[#0a0f15] text-[14px] tracking-[-0.02em] leading-[1.3em]">
                   {el}
                 </p>
 
                 <span className="mt-[2px] h-[1px] w-0 bg-[#0a0f15] transition-all duration-300 group-hover:w-full" />
-              </a>
+              </Link>
             ))}
           </div>
           <div className="flex gap-[12px] w-min h-min ">
@@ -94,6 +82,7 @@ export default function Header() {
               textColor="#ffff"
               ctaText={`Get in touch`}
               padding={`10px 14px`}
+              linkTo={`/contact-us`}
             />
           </div>
         </div>
@@ -128,17 +117,16 @@ export default function Header() {
           <div className="flex flex-col gap-[46px] pt-[60px] items-center">
             <div className="flex flex-col gap-[24px]">
               {ele.map((el, index) => (
-                <a
+                <Link
                   key={index}
-                  href={`#${el.toLowerCase().replace(/\s+/g, "-")}`}
-                  onClick={(e) => {
-                    toSection(e, el);
+                  href={`/${el.toLowerCase().replace(/\s+/g, "-")}`}
+                  onClick={() => {
                     setIsOpen(false);
                   }}
                   className="text-[#0a0f15] text-[18px] leading-[1em] tracking-[-0.04em] font-[500]"
                 >
                   {el}
-                </a>
+                </Link>
               ))}
             </div>
 
@@ -155,6 +143,7 @@ export default function Header() {
                 textColor="#fff"
                 ctaText={`Get in touch`}
                 padding={`14px 18px`}
+                linkTo={`/contact-us`}
               />
             </div>
 
@@ -185,12 +174,12 @@ export default function Header() {
             </div>
 
             <div className="flex flex-col gap-[24px] text-center">
-              <a
+              <Link
                 href="mailto:contact@flatwhite.com"
                 className="text-[#0a0f15] text-[18px]"
               >
                 contact@flatwhite.com
-              </a>
+              </Link>
 
               <p className="text-[#747e90] text-[14px] leading-[1.5em] max-w-[240px]">
                 FlatWhite Consulting 10 Queen Street, London, UK

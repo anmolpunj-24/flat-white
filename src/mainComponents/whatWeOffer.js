@@ -7,10 +7,7 @@ import WhatWeOfferCard from "@/components/whatWeOfferCard";
 
 export default function WhatWeOffer() {
   return (
-    <div
-      id="services"
-      className="h-min flex flex-col max-w-[1440px] items-center gap-[60px] xl:gap-[96px] w-full pt-[46px] pb-[60px] lg:pb-[124px] px-[12px] lg:px-[40px] xl:px-[124px] m-auto"
-    >
+    <div className="h-min flex flex-col max-w-[1440px] items-center gap-[60px] xl:gap-[96px] w-full pt-[46px] pb-[60px] lg:pb-[124px] px-[12px] lg:px-[40px] xl:px-[124px] m-auto">
       <div className="flex flex-col xl:flex-row gap-[40px] lg:gap-[100px] h-min p-0 w-full">
         <SectionTag
           heading={`/  What we offer`}

@@ -42,17 +42,6 @@ export default function Footer() {
     }
   };
 
-  let toSection = (e, el) => {
-    e.preventDefault();
-    if (typeof window !== "undefined") {
-      const id = el.toLowerCase().replace(/\s+/g, "-");
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  };
-
   return (
     <div className="flex flex-col h-min items-center bg-[#0a0f15] rounded-tl-[12px] rounded-tr-[12px] w-full">
       <div className="flex flex-col gap-[60px] lg:gap-[164px] pt-[60px] lg:pt-[164px] px-[20px] lg:px-[40px] xl:px-[124px] pb-[40px] lg:pb-[52px] max-w-[1440px] w-full items-center">
@@ -133,24 +122,23 @@ export default function Footer() {
               </p>
 
               <div className="flex flex-col gap-[12px] items-center lg:items-start">
-                {["About Us", "Services", "Process", "Pricing"].map(
+                {["About Us", "Services", "Blogs", "Testimonials"].map(
                   (item, index) => (
-                    <a
+                    <Link
                       key={index}
-                      href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+                      href={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
                       className="group flex flex-col w-fit"
-                      onClick={(e) => toSection(e, item)}
                     >
                       <p className="text-white text-[14px] leading-[1.3em] tracking-[-0.02em]">
                         {item}
                       </p>
 
                       <span className="mt-[2px] h-[1px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
-                    </a>
+                    </Link>
                   ),
                 )}
               </div>
-            </div> 
+            </div>
 
             <div className="flex flex-col gap-[18px] lg:gap-[24px] h-min items-center lg:items-start">
               <p className="text-[12px] uppercase font-[600] leadin-[1em] text-[#747e90]">
@@ -163,13 +151,16 @@ export default function Footer() {
                   10 Queen Street, London, UK
                 </p>
 
-                <a href="mailto:contact@flatwhite.com" className="group w-fit">
+                <Link
+                  href="mailto:contact@flatwhite.com"
+                  className="group w-fit"
+                >
                   <p className="text-white text-[14px] leading-[1.3em] tracking-[-0.02em]">
                     contact@flatwhite.com
                   </p>
 
                   <span className="mt-[2px] block h-[1px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

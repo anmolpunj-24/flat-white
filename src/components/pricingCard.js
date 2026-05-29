@@ -45,6 +45,7 @@ export default function PricingCard() {
           textColor="#111"
           ctaText={`Request a proposal`}
           padding={`18px 24px`}
+          linkTo={`/contact-us`}
         />
       </div>
     </div>

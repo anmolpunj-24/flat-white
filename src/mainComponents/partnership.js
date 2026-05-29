@@ -61,6 +61,7 @@ export default function Partnership() {
             textColor="#111"
             ctaText={`Apply now`}
             padding={`18px 24px`}
+            linkTo={`/contact-us`}
           />
         </div>
       </div>

@@ -53,7 +53,7 @@ export default function WhoWeAre() {
   }, []);
 
   return (
-    <div className="px-[12px] lg:pb-[46px]" id="about-us">
+    <div className="px-[12px] lg:pb-[46px]">
       <div className="flex flex-col justify-center bg-[#0a0f15] rounded-bl-[12px] rounded-br-[12px]">
         <div className="max-w-[1440px] w-full mx-auto">
           <div className="flex flex-col xl:flex-row gap-[100px] py-[60px] px-[20px] lg:pt-[100px] xl:pt-[120px] lg:px-[40px] xl:pl-[112px] xl:pr-[60px] lg:pb-[120px] xl:pb-[164px]">
@@ -121,6 +121,7 @@ export default function WhoWeAre() {
                 textColor={`#111`}
                 ctaText={`Learn more`}
                 padding={`18px 24px`}
+                linkTo={`/about-us`}
               />
             </div>
           </div>

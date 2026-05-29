@@ -45,7 +45,7 @@ export default function OurProcess() {
   }, []);
 
   return (
-    <div className="px-[12px]" id="process">
+    <div className="px-[12px]">
       <div className="bg-[#657084] w-full flex flex-col h-min lg:pt-[120px] pt-[60px] xl:pt-[164px] px-[20px] lg:px-[40px] xl:px-[112px] rounded-[12px]">
         <div className="w-full max-w-[1440px] mx-auto flex flex-col gap-[32px] lg:gap-[80px] items-center">
           <div className="flex flex-col gap-[40px] lg:gap-[100px] xl:gap-[146px] w-full max-w-[940px]">

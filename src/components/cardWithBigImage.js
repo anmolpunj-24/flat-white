@@ -30,6 +30,7 @@ export default function CardWithBigImage() {
           textColor="#ffff"
           ctaText={`Learn More`}
           padding={`10px 14px`}
+          linkTo={`/services`}
         />
       </div>
     </div>
