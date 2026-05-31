@@ -19,21 +19,18 @@ export default function Loader() {
   useEffect(() => {
     if (!loading || !textRef.current) return;
 
-    const letters = textRef.current.children;
-
-    const animations = Array.from(letters).map((letter) =>
+    const animations = Array.from(textRef.current.children).map((letter, i) =>
       gsap.to(letter, {
         y: -12,
-        duration: 0.45,
-        ease: "power1.inOut",
+        duration: 0.4,
+        ease: "power2.inOut",
         repeat: -1,
         yoyo: true,
+        delay: i * 0.08,
       }),
     );
 
-    return () => {
-      animations.forEach((animation) => animation.kill());
-    };
+    return () => animations.forEach((a) => a.kill());
   }, [loading]);
 
   useEffect(() => {
