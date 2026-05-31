@@ -6,6 +6,7 @@ import "@/styles/globals.css";
 import Header from "@/mainComponents/header";
 import Footer from "@/mainComponents/footer";
 import Seo from "@/mainComponents/seo";
+import Loader from "@/components/loader";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,6 +19,9 @@ export default function App({ Component, pageProps }) {
     <div className={`${inter.className} flex flex-col min-h-screen`}>
       {/* seo */}
       <Seo />
+
+      {/* loader */}
+      <Loader />
 
       {/* header */}
       <Header />

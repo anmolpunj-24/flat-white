@@ -1,6 +1,9 @@
 // nextjs import
 import Image from "next/image";
 
+// component import
+import RelatedBlogCard from "@/components/relatedBlogCard";
+
 export default function BlogsDetail() {
   return (
     <div className="w-full min-h-screen bg-gradient-to-b from-[#e1e6ed] to-[#f5f7fa] text-[#111]">
@@ -42,31 +45,9 @@ export default function BlogsDetail() {
             Related Blogs
           </h2>
 
-          <div className="flex flex-col gap-[16px]">
-            {[1, 2, 3, 4].map((item) => (
-              <div
-                key={item}
-                className="flex gap-[14px] p-[14px] rounded-[20px] border border-[#e3e7ee] bg-[#f8fafc] hover:bg-[#eef2f6] transition-all duration-300 cursor-pointer"
-              >
-                <div className="relative overflow-hidden rounded-[14px] shrink-0 w-[92px] h-[92px]">
-                  <Image
-                    src="/assets/people.avif"
-                    alt="related blog"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-
-                <div className="flex flex-col justify-between gap-[10px]">
-                  <h3 className="text-[16px] leading-[1.3em] tracking-[-0.03em] font-[500] text-[#111]">
-                    How Strategic Design Improves Business Performance
-                  </h3>
-
-                  <span className="text-[13px] text-[#7b8494]">
-                    May 28, 2026
-                  </span>
-                </div>
-              </div>
+          <div className="flex flex-col gap-[10px]">
+            {Array.from({ length: 4 }).map((item) => (
+              <RelatedBlogCard key={item} />
             ))}
           </div>
         </div>

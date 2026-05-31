@@ -9,7 +9,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function Header() {
-  let ele = ["About Us", "Services", "Blogs", "Testimonials"];
+  let ele = ["About Us", "Services", "Blogs", "Testimonials", "Case Studies"];
 
   const [isOpen, setIsOpen] = useState(false);
 

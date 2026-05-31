@@ -122,7 +122,7 @@ export default function Footer() {
               </p>
 
               <div className="flex flex-col gap-[12px] items-center lg:items-start">
-                {["About Us", "Services", "Blogs", "Testimonials"].map(
+                {["About Us", "Services", "Blogs", "Testimonials", "Case Studies", "location"].map(
                   (item, index) => (
                     <Link
                       key={index}

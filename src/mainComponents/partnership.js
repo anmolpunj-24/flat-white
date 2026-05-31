@@ -100,29 +100,30 @@ export default function Partnership() {
             </div>
           </div>
 
-          <div className="flex flex-col xl:flex-row gap-[40px] lg:gap-[100px] xl:gap-[40px] h-min pt-[60px] lg:pt-[92px] px-[20px] lg:px-[40px] xl:px-[124px] pb-[32px] lg:pb-[46px] justify-between">
-            <SectionTag
-              heading={`/  Our experts`}
-              bgColor={`#222631`}
-              textColor={"#fff"}
-              animation={true}
-            />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[18px] max-w-[1200px] mx-auto pb-[20px]">
+            {Array.from({ length: 4 }).map((item) => (
+              <div
+                key={item}
+                className="bg-[#ffffff0a] rounded-[24px] p-[30px] lg:p-[40px] flex flex-col gap-[24px]"
+              >
+                <span className="text-[18px] text-[#f59e0b]">★★★★★</span>
 
-            <SectionHeading
-              fontSize={`text-[36px] lg:text-[60px] xl:text-[64px]`}
-              color={`#fff`}
-              letterSpacing={`tracking-[-0.06em]`}
-              lineHeight={`leading-[1em]`}
-              text={`The team driving strategy, innovation and growth`}
-              maxWidth={`max-w-[720px]`}
-            />
-          </div>
+                <p className="text-[20px] lg:text-[22px] font-[500] tracking-[-0.04em] leading-[1.3em] text-[#fff]">
+                  "FlatWhite helped us increase qualified leads by 230% in just
+                  six months."
+                </p>
 
-          <Divider bgColor={`#222631`} />
+                <div className="flex items-center gap-[16px] mt-auto">
+                  <div className="w-[56px] h-[56px] rounded-full bg-[#d9dee5]" />
 
-          <div className="flex flex-col lg:grid lg:grid-cols-[repeat(2,minmax(200px,1fr))] justify-center gap-[4px] h-min px-[20px] pt-[32px] pb-[20px] lg:px-[40px] xl:px-[124px] py-[92px]">
-            {Array.from({ length: 6 }).map((_, index) => (
-              <TeamCard key={index} />
+                  <div>
+                    <h4 className="font-[600] text-[#fff]">Sarah Johnson</h4>
+                    <p className="text-[14px] text-[#657084]">
+                      Marketing Director, NovaTech
+                    </p>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
