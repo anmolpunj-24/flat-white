@@ -71,8 +71,16 @@ export default function Testimonials() {
           {[1, 2].map((item) => (
             <div
               key={item}
-              className="bg-[#f0f1f5] rounded-[24px] p-[30px] lg:p-[40px] flex flex-col gap-[24px]"
+              className="relative bg-[#f0f1f5] rounded-[24px] p-[30px] lg:p-[40px] flex flex-col gap-[24px]"
             >
+              <Image
+                src={`/assets/quotes.svg`}
+                height={50}
+                width={50}
+                alt="quotes"
+                className="absolute right-[10px] top-[-10px] opacity-[0.5]"
+              />
+
               <span className="text-[18px] text-[#f59e0b]">★★★★★</span>
 
               <p className="text-[20px] lg:text-[24px] font-[500] tracking-[-0.06em] leading-[1.2em] text-[#111]">

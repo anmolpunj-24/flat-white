@@ -104,8 +104,15 @@ export default function Partnership() {
             {Array.from({ length: 4 }).map((item) => (
               <div
                 key={item}
-                className="bg-[#ffffff0a] rounded-[24px] p-[30px] lg:p-[40px] flex flex-col gap-[24px]"
+                className="relative bg-[#ffffff0a] rounded-[24px] p-[30px] lg:p-[40px] flex flex-col gap-[24px]"
               >
+                <Image
+                  src={`/assets/quotes.svg`}
+                  height={50}
+                  width={50}
+                  alt="quotes"
+                  className="absolute right-[10px] top-[-10px] invert brightness-0"
+                />
                 <span className="text-[18px] text-[#f59e0b]">★★★★★</span>
 
                 <p className="text-[20px] lg:text-[22px] font-[500] tracking-[-0.04em] leading-[1.3em] text-[#fff]">
