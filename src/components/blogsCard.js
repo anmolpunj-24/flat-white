@@ -1,9 +1,15 @@
 // nextjs import
 import Image from "next/image";
+import { useRouter } from "next/router";
 
-export default function BlogsCard() {
+export default function BlogsCard({ link }) {
+  let router = useRouter();
+
   return (
-    <div className="group relative w-full md:w-[calc(50%-5px)] lg:w-[calc(33.333%-7px)] aspect-[3/4] overflow-hidden rounded-[12px] cursor-pointer">
+    <div
+      onClick={link ? () => router.push("/blogs-detail") : undefined}
+      className="group relative w-full md:w-[calc(50%-5px)] lg:w-[calc(33.333%-7px)] aspect-[3/4] overflow-hidden rounded-[12px] cursor-pointer"
+    >
       <Image
         src="/assets/people.avif"
         alt="blog-title"

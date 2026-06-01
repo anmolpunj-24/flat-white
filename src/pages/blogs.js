@@ -14,7 +14,7 @@ export default function Blogs() {
       />
       <div className="flex flex-wrap gap-[10px]">
         {Array.from({ length: 6 }).map((_, index) => (
-          <BlogsCard key={index} />
+          <BlogsCard key={index} link={`/blogs-detail`}/>
         ))}
       </div>
 

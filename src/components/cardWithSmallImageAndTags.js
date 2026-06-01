@@ -1,15 +1,19 @@
 // nextjs import
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 // components import
 import SectionHeading from "./sectionHeading";
 import SectionSmallHeading from "./sectionSmallHeading";
 import SectionTag from "./sectionTag";
 
-export default function CardWithSmallImageAndTags({ hover }) {
+export default function CardWithSmallImageAndTags({ hover, link }) {
+  let router = useRouter();
+
   return (
     <div
+      onClick={link ? () => router.push("/service-detail") : undefined}
       className={`${hover ? "group cursor-pointer" : ""} flex flex-col gap-[40px] lg:gap-0 lg:content-between h-min bg-[#f0f1f5] rounded-[12px] w-full min-h-unset lg:min-h-[500px] p-[24px] lg:p-[32px]`}
     >
       <div className="flex justify-between items-center overflow-hidden">

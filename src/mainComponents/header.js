@@ -9,7 +9,14 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function Header() {
-  let ele = ["About Us", "Services", "Blogs", "Testimonials", "Case Studies"];
+  let ele = [
+    "Home",
+    "About Us",
+    "Services",
+    "Blogs",
+    "Testimonials",
+    "Case Studies",
+  ];
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -59,7 +66,11 @@ export default function Header() {
             {ele.map((el, index) => (
               <Link
                 key={index}
-                href={`/${el.toLowerCase().replace(/\s+/g, "-")}`}
+                href={
+                  el.toLowerCase() === "home"
+                    ? "/"
+                    : `/${el.toLowerCase().replace(/\s+/g, "-")}`
+                }
                 className="group flex flex-col w-fit hover:cursor-pointer"
               >
                 <p className="whitespace-pre text-[#0a0f15] text-[14px] tracking-[-0.02em] leading-[1.3em]">

@@ -30,7 +30,7 @@ export default function Services() {
       <div className="h-min flex flex-wrap gap-[4px] w-full">
         {Array.from({ length: 4 }).map((_, index) => (
           <div key={index} className="w-full lg:w-[calc(50%-2px)]">
-            <CardWithSmallImageAndTags hover={true} />
+            <CardWithSmallImageAndTags hover={true} link={`/service-detail`}/>
           </div>
         ))}
       </div>

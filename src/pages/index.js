@@ -34,7 +34,7 @@ export default function Home() {
       <Partnership />
 
       {/* pricing */}
-      <Pricing />
+      {/* <Pricing /> */}
 
       {/* faq */}
       <Faqs />
