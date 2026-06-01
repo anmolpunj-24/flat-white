@@ -44,8 +44,10 @@ export default function AboutUs() {
     const cards = gsap.utils.toArray(".timeline-card");
     const dots = gsap.utils.toArray(".timeline-dot");
 
+    const isLg = window.innerWidth >= 1024;
+
     cards.forEach((card, index) => {
-      const direction = index % 2 === 0 ? -70 : 70;
+      const direction = isLg ? (index % 2 === 0 ? -70 : 70) : 0;
 
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -100,7 +102,7 @@ export default function AboutUs() {
 
   return (
     <div className="max-w-[1440px] w-full mx-auto">
-      <div className="px-[20px] lg:px-[40px] xl:px-[124px] py-[80px]">
+      <div className="px-[20px] lg:px-[40px] xl:px-[124px] py-[20px] lg:py-[80px]">
         <div className="grid xl:grid-cols-[240px_1fr] gap-[60px]">
           <SectionTag
             heading={`/  Who We Are`}
@@ -149,21 +151,23 @@ export default function AboutUs() {
             />
           </div>
 
-          <div className="timeline-wrapper relative max-w-[1000px] mx-auto">
-            <div className="timeline-line absolute left-1/2 top-0 bottom-0 w-[2px] bg-[#d9dee5] -translate-x-1/2" />
+          <div className="timeline-wrapper relative lg:max-w-[1000px] mx-auto">
+            <div className="hidden lg:block timeline-line absolute lg:left-1/2 top-0 bottom-0 w-[2px] bg-[#d9dee5] -translate-x-1/2" />
 
             {timeline.map((item, index) => (
               <div
                 key={item.year}
-                className={`relative flex items-center mb-[60px] ${
-                  index % 2 === 0 ? "justify-start" : "justify-end"
+                className={`relative flex items-center mb-[10px] lg:mb-[60px] ${
+                  index % 2 === 0
+                    ? "justify-center lg:justify-start"
+                    : "justify-center lg:justify-end"
                 }`}
               >
-                <div className="timeline-dot absolute left-1/2 w-[16px] h-[16px] bg-[#111] rounded-full -translate-x-1/2 z-10" />
+                <div className="hidden lg:block timeline-dot absolute left-1/2 w-[16px] h-[16px] bg-[#111] rounded-full -translate-x-1/2 z-10" />
 
                 <div
-                  className={`timeline-card w-full md:w-[calc(50%-40px)] bg-[#f0f1f5] rounded-[20px] p-[24px] ${
-                    index % 2 === 0 ? "mr-auto" : "ml-auto"
+                  className={`timeline-card w-full lg:w-[calc(50%-40px)] bg-[#f0f1f5] rounded-[20px] p-[24px] ${
+                    index % 2 === 0 ? "lg:mr-auto" : "lg:ml-auto"
                   }`}
                 >
                   <span className="text-[14px] font-[600] text-[#657084]">

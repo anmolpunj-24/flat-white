@@ -8,8 +8,8 @@ import Image from "next/image";
 
 export default function Testimonials() {
   return (
-    <div className="h-min flex flex-col max-w-[1440px] items-center gap-[60px] xl:gap-[96px] w-full pt-[46px] pb-[60px] lg:pb-[124px] px-[12px] lg:px-[40px] xl:px-[124px] m-auto">
-      <div className="flex flex-col xl:flex-row justify-between gap-[40px] lg:gap-[100px] h-min p-0 w-full">
+    <div className="h-min flex flex-col max-w-[1440px] items-center gap-[40px] xl:gap-[96px] w-full pt-[46px] pb-[60px] lg:pb-[124px] px-[12px] lg:px-[40px] xl:px-[124px] m-auto">
+      <div className="flex flex-col xl:flex-row justify-between gap-[30px] lg:gap-[60px] xl:gap-[100px] h-min p-0 w-full">
         <SectionTag
           heading={`/ Testimonials`}
           bgColor={`#e0e5eb`}
@@ -17,7 +17,7 @@ export default function Testimonials() {
           animation={true}
         />
 
-        <div className="flex flex-col gap-[32px] max-w-[720px]">
+        <div className="flex flex-col gap-[32px]">
           <SectionHeading
             fontSize={`text-[36px] lg:text-[60px] xl:text-[64px]`}
             color={`#0a0f15`}
@@ -144,10 +144,10 @@ export default function Testimonials() {
               className={`break-inside-avoid bg-[#f0f1f5] rounded-[24px] p-[24px] mb-[20px]
         ${
           item.size === "large"
-            ? "min-h-[300px]"
+            ? "xl:min-h-[300px]"
             : item.size === "medium"
-              ? "min-h-[220px]"
-              : "min-h-[180px]"
+              ? "xl:min-h-[220px]"
+              : "xl:min-h-[180px]"
         }`}
             >
               <div className="flex flex-col h-full">
