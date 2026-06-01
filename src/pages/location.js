@@ -15,24 +15,27 @@ export default function Location() {
     "E-Commerce",
   ];
 
-  const challenges = [
-    "Generating qualified leads",
-    "Building a strong online presence",
-    "Scaling operations efficiently",
-    "Standing out from competitors",
-    "Improving conversion rates",
-    "Creating sustainable growth",
-  ];
-
-  const areas = [
-    "Model Town",
-    "Urban Estate",
-    "Civil Lines",
-    "GTB Nagar",
-    "Ladowali Road",
-    "Football Chowk",
-    "Maqsudan",
-    "Rama Mandi",
+  const services = [
+    {
+      title: "Business Strategy",
+      description:
+        "Strategic planning, market positioning, competitive analysis and long-term growth roadmaps that help businesses scale sustainably.",
+    },
+    {
+      title: "Operational Excellence",
+      description:
+        "Process optimization, workflow improvements and performance management systems that increase efficiency and profitability.",
+    },
+    {
+      title: "Digital Transformation",
+      description:
+        "Technology implementation, workflow automation and digital initiatives designed to modernize business operations.",
+    },
+    {
+      title: "Growth Consulting",
+      description:
+        "Customer acquisition, revenue growth strategies and market expansion planning to accelerate business performance.",
+    },
   ];
 
   return (
@@ -85,45 +88,74 @@ export default function Location() {
 
       <div className="grid xl:grid-cols-[240px_1fr] gap-[60px]">
         <SectionTag
-          heading={`/ Why FlatWhite`}
+          heading={`/ Business Consulting in Jalandhar`}
           bgColor="#e0e5eb"
           textColor="#111"
         />
 
-        <div className="grid md:grid-cols-2 gap-[20px]">
-          {[
-            "Deep understanding of local markets",
-            "Data-driven business decisions",
-            "Growth-focused strategies",
-            "Measurable business outcomes",
-          ].map((item) => (
-            <div key={item} className="bg-[#f0f1f5] rounded-[20px] p-[28px]">
-              <h3 className="text-[22px] font-[500] tracking-[-0.04em]">
-                {item}
-              </h3>
-            </div>
-          ))}
+        <div className="flex flex-col gap-[24px] max-w-[900px]">
+          <SectionHeading
+            fontSize="text-[36px] lg:text-[56px]"
+            color="#111"
+            letterSpacing="tracking-[-0.06em]"
+            lineHeight="leading-[1em]"
+            text="Helping Businesses Scale, Optimize & Grow"
+          />
+
+          <p className="text-[#657084] text-[18px] leading-[1.8]">
+            FlatWhite provides business consulting services in Jalandhar for
+            startups, SMEs, family-owned businesses, manufacturers, retailers,
+            healthcare providers, educational institutions, and technology
+            companies. We help organizations improve operational efficiency,
+            increase profitability, streamline business processes, and develop
+            scalable growth strategies.
+          </p>
+
+          <p className="text-[#657084] text-[18px] leading-[1.8]">
+            Our consultants work closely with leadership teams to identify
+            growth opportunities, solve operational bottlenecks, implement
+            digital transformation initiatives, improve customer acquisition,
+            and build sustainable competitive advantages. Every engagement is
+            tailored to the business's objectives, industry dynamics, and market
+            position.
+          </p>
         </div>
       </div>
 
-      <div className="flex flex-col gap-[40px]">
-        <SectionHeading
-          fontSize="text-[36px] lg:text-[56px]"
-          color="#111"
-          letterSpacing="tracking-[-0.06em]"
-          lineHeight="leading-[1em]"
-          text="Industries We Support in Jalandhar"
+      <div className="grid xl:grid-cols-[240px_1fr] gap-[60px]">
+        <SectionTag
+          heading={`/ Industries We Serve`}
+          bgColor="#e0e5eb"
+          textColor="#111"
         />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-[16px]">
-          {industries.map((industry) => (
-            <div
-              key={industry}
-              className="bg-[#f0f1f5] rounded-[16px] p-[24px]"
-            >
-              {industry}
-            </div>
-          ))}
+        <div className="flex flex-col gap-[32px]">
+          <SectionHeading
+            fontSize="text-[36px] lg:text-[56px]"
+            color="#111"
+            letterSpacing="tracking-[-0.06em]"
+            lineHeight="leading-[1em]"
+            text="Industry-Specific Consulting Expertise"
+          />
+
+          <p className="text-[#657084] text-[18px] leading-[1.8] max-w-[900px]">
+            Our consultants work with organizations across manufacturing,
+            healthcare, education, retail, hospitality, technology, real estate
+            and e-commerce sectors. We understand that every industry faces
+            unique operational, competitive and growth challenges, which is why
+            our recommendations are customized to each business and market.
+          </p>
+
+          <div className="flex flex-wrap gap-[12px]">
+            {industries.map((industry) => (
+              <div
+                key={industry}
+                className="bg-[#f0f1f5] rounded-full px-[20px] py-[12px]"
+              >
+                {industry}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -134,16 +166,41 @@ export default function Location() {
             color="#fff"
             letterSpacing="tracking-[-0.06em]"
             lineHeight="leading-[1em]"
-            text="Common Growth Challenges for Businesses in Jalandhar"
+            text="Business Challenges We Help Solve"
           />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-[20px]">
-            {challenges.map((challenge) => (
+          <div className="grid gap-[20px]">
+            {[
+              {
+                challenge: "Stagnant Revenue Growth",
+                solution:
+                  "Developing growth strategies, market expansion plans and customer acquisition systems.",
+              },
+              {
+                challenge: "Operational Inefficiencies",
+                solution:
+                  "Optimizing workflows, reducing waste and improving productivity.",
+              },
+              {
+                challenge: "Digital Transformation",
+                solution:
+                  "Implementing technology, automation and modern business processes.",
+              },
+              {
+                challenge: "Scaling Operations",
+                solution:
+                  "Building systems, structures and processes that support sustainable growth.",
+              },
+            ].map((item) => (
               <div
-                key={challenge}
-                className="bg-[#151b23] rounded-[16px] p-[24px]"
+                key={item.challenge}
+                className="grid lg:grid-cols-[300px_1fr] gap-[24px] bg-[#151b23] rounded-[20px] p-[28px]"
               >
-                <p className="text-[#b8c0cc]">{challenge}</p>
+                <h3 className="text-white text-[22px] font-[500]">
+                  {item.challenge}
+                </h3>
+
+                <p className="text-[#b8c0cc] leading-[1.7]">{item.solution}</p>
               </div>
             ))}
           </div>
@@ -156,41 +213,65 @@ export default function Location() {
           color="#111"
           letterSpacing="tracking-[-0.06em]"
           lineHeight="leading-[1em]"
-          text="Services We Offer"
+          text="Business Consulting Services We Offer"
         />
 
         <div className="grid md:grid-cols-2 gap-[20px]">
-          {[
-            "Business Strategy",
-            "Operational Excellence",
-            "Digital Transformation",
-            "Growth Consulting",
-          ].map((service) => (
-            <div key={service} className="bg-[#f0f1f5] rounded-[20px] p-[32px]">
-              <h3 className="text-[24px] font-[500]">{service}</h3>
+          {services.map((service) => (
+            <div
+              key={service.title}
+              className="bg-[#f0f1f5] rounded-[20px] p-[32px]"
+            >
+              <h3 className="text-[24px] font-[600] mb-[12px]">
+                {service.title}
+              </h3>
+
+              <p className="text-[#657084] leading-[1.8]">
+                {service.description}
+              </p>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="flex flex-col gap-[32px]">
-        <SectionHeading
-          fontSize="text-[36px] lg:text-[56px]"
-          color="#111"
-          letterSpacing="tracking-[-0.06em]"
-          lineHeight="leading-[1em]"
-          text="Serving Businesses Across Jalandhar"
+      <div className="grid xl:grid-cols-[240px_1fr] gap-[60px]">
+        <SectionTag
+          heading={`/ Why FlatWhite`}
+          bgColor="#e0e5eb"
+          textColor="#111"
         />
 
-        <div className="flex flex-wrap gap-[12px]">
-          {areas.map((area) => (
-            <span
-              key={area}
-              className="px-[18px] py-[12px] bg-[#f0f1f5] rounded-full"
-            >
-              {area}
-            </span>
-          ))}
+        <div className="flex flex-col gap-[32px]">
+          <SectionHeading
+            fontSize="text-[36px] lg:text-[56px]"
+            color="#111"
+            letterSpacing="tracking-[-0.06em]"
+            lineHeight="leading-[1em]"
+            text="Why Businesses Choose FlatWhite"
+          />
+
+          <p className="text-[#657084] text-[18px] leading-[1.8]">
+            Businesses choose FlatWhite because we combine strategic thinking
+            with practical execution. Our consulting engagements focus on
+            measurable business outcomes, helping organizations improve
+            efficiency, increase profitability and build sustainable growth
+            systems.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-[20px]">
+            {[
+              "Deep understanding of local markets",
+              "Data-driven business decisions",
+              "Growth-focused strategies",
+              "Measurable business outcomes",
+            ].map((item) => (
+              <div key={item} className="bg-[#f0f1f5] rounded-[20px] p-[28px]">
+                <h3 className="text-[22px] font-[500] tracking-[-0.04em]">
+                  {item}
+                </h3>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
