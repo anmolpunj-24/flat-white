@@ -1,9 +1,8 @@
 // reactjs import
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 // nextjs import
 import { useRouter } from "next/router";
-import { useRef } from "react";
 
 // gsap import
 import gsap from "gsap";
@@ -15,6 +14,8 @@ export default function Loader() {
   const [pageName, setPageName] = useState("");
 
   const textRef = useRef(null);
+  const startTimeRef = useRef(0);
+  const timerRef = useRef(null);
 
   useEffect(() => {
     if (!loading || !textRef.current) return;
@@ -35,11 +36,15 @@ export default function Loader() {
 
   useEffect(() => {
     const handleStart = (url) => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+      startTimeRef.current = Date.now();
+
       const formattedName =
         url === "/"
           ? "Home"
           : url
-              .replace("/", "")
+              .replace(/\//g, " ")
               .replace(/-/g, " ")
               .replace(/\b\w/g, (char) => char.toUpperCase());
 
@@ -48,7 +53,13 @@ export default function Loader() {
     };
 
     const handleComplete = () => {
-      setLoading(false);
+      const minDuration = 2000; // 2 seconds total
+      const elapsedTime = Date.now() - startTimeRef.current;
+      const remainingTime = Math.max(0, minDuration - elapsedTime);
+
+      timerRef.current = setTimeout(() => {
+        setLoading(false);
+      }, remainingTime);
     };
 
     router.events.on("routeChangeStart", handleStart);

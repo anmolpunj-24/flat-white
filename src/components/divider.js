@@ -15,7 +15,7 @@ export default function Divider({ bgColor }) {
       scrollTrigger: {
         trigger: lineRef.current,
         start: "top 85%",
-        toggleActions: "play none none none",
+        toggleActions: "play none none reverse",
       },
       duration: 4,
       x: 10,

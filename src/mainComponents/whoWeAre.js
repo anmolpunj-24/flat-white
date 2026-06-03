@@ -35,7 +35,7 @@ export default function WhoWeAre() {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top 90%",
-        toggleActions: "play none none none",
+        toggleActions: "play none none reverse",
       },
       x: (index) => {
         const distanceIndex = index - centerIndex;

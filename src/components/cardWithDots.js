@@ -32,7 +32,7 @@ export default function CardWithDots({
         scrollTrigger: {
           trigger: valueRef.current,
           start: "top 85%",
-          toggleActions: "play none none none",
+          toggleActions: "play none none reverse",
         },
 
         onUpdate: function () {

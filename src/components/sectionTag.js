@@ -23,7 +23,7 @@ export default function SectionTag({
       scrollTrigger: {
         trigger: headingRef.current,
         start: "top 95%",
-        toggleActions: "play none none none",
+        toggleActions: "play none none reverse",
       },
       duration: 0.6,
       opacity: 0,
