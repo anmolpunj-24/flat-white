@@ -1,0 +1,52 @@
+{
+  "servicesData": [
+    {
+      "title": "Frontend Development",
+      "smallHeading": "Modern React Applications",
+      "category": "Web Development",
+      "image": "/assets/react.svg"
+    },
+    {
+      "title": "Backend Development",
+      "smallHeading": "Scalable Server Solutions",
+      "category": "API Development",
+      "image": "/assets/react.svg"
+    },
+    {
+      "title": "REST API Development",
+      "smallHeading": "Secure & High-Performance APIs",
+      "category": "Backend Services",
+      "image": "/assets/react.svg"
+    },
+    {
+      "title": "DevOps & Kubernetes",
+      "smallHeading": "Container Orchestration",
+      "category": "Cloud Infrastructure",
+      "image": "/assets/react.svg"
+    },
+    {
+      "title": "CI/CD Automation",
+      "smallHeading": "Streamlined Deployments",
+      "category": "DevOps",
+      "image": "/assets/react.svg"
+    },
+    {
+      "title": "Cloud Deployment",
+      "smallHeading": "AWS Infrastructure Setup",
+      "category": "Cloud Services",
+      "image": "/assets/react.svg"
+    },
+    {
+      "title": "Interactive Web Experiences",
+      "smallHeading": "GSAP & Advanced Animations",
+      "category": "Frontend Development",
+      "image": "/assets/react.svg"
+    },
+    {
+      "title": "Database Design",
+      "smallHeading": "Efficient Data Architecture",
+      "category": "Database Management",
+      "image": "/assets/react.svg"
+    }
+  ]
+}

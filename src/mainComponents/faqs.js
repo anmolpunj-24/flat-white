@@ -4,7 +4,7 @@ import FaqCard from "@/components/faqCard";
 import SectionHeading from "@/components/sectionHeading";
 import SectionTag from "@/components/sectionTag";
 
-export default function Faqs() {
+export default function Faqs({data}) {
   return (
     <div className="px-[12px] pb-[12px]">
       <div className="relative h-min bg-[#657084] w-full rounded-[12px]">
@@ -29,8 +29,8 @@ export default function Faqs() {
           <Divider bgColor={`#747e90`} />
 
           <div className="columns-1 xl:columns-2 gap-[4px] space-y-[4px]">
-            {Array.from({ length: 6 }).map((_, index) => (
-              <FaqCard key={index} />
+            {data.map((item, index) => (
+              <FaqCard key={index} faqs={item}/>
             ))}
           </div>
 

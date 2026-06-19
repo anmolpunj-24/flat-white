@@ -2,14 +2,11 @@
 import SectionHeading from "@/components/sectionHeading";
 import CtaButton from "@/components/ctaButton";
 import SectionSmallHeading from "@/components/sectionSmallHeading";
-import TeamCard from "@/components/teamCard";
-import SectionTag from "@/components/sectionTag";
-import Divider from "@/components/divider";
 
 // nextjs import
 import Image from "next/image";
 
-export default function Partnership() {
+export default function Partnership({data}) {
   return (
     <div className="h-min items-center pt-[60px] lg:pt-[78px] px-[6px] lg:px-[12px] pb-[0px] relative">
       <div className="relative rounded-[12px] overflow-hidden min-h-[500px] lg:min-h-[720px] w-full">
@@ -101,9 +98,9 @@ export default function Partnership() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[18px] max-w-[1200px] mx-auto pb-[20px]">
-            {Array.from({ length: 4 }).map((item) => (
+            {data.map((item, index) => (
               <div
-                key={item}
+                key={index}
                 className="relative bg-[#ffffff0a] rounded-[24px] p-[30px] lg:p-[40px] flex flex-col gap-[24px]"
               >
                 <Image
@@ -116,17 +113,16 @@ export default function Partnership() {
                 <span className="text-[18px] text-[#f59e0b]">★★★★★</span>
 
                 <p className="text-[20px] lg:text-[22px] font-[500] tracking-[-0.04em] leading-[1.3em] text-[#fff]">
-                  "FlatWhite helped us increase qualified leads by 230% in just
-                  six months."
+                  {item?.comment}
                 </p>
 
                 <div className="flex items-center gap-[16px] mt-auto">
                   <div className="w-[56px] h-[56px] rounded-full bg-[#d9dee5]" />
 
                   <div>
-                    <h4 className="font-[600] text-[#fff]">Sarah Johnson</h4>
+                    <h4 className="font-[600] text-[#fff]">{item?.name}</h4>
                     <p className="text-[14px] text-[#657084]">
-                      Marketing Director, NovaTech
+                      {item?.designation}
                     </p>
                   </div>
                 </div>

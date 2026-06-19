@@ -1,0 +1,113 @@
+{
+  "banner": {
+    "heading": "Building Digital Solutions That Drive Growth",
+    "smallHeading": "We help businesses transform ideas into scalable products through strategy, design, and engineering excellence."
+  },
+  "whoAreWe": [
+    {
+      "value": "42+",
+      "text": "Projects Delivered"
+    },
+    {
+      "value": "98%",
+      "text": "Client Satisfaction"
+    },
+    {
+      "value": "15+",
+      "text": "Industry Experts"
+    },
+    {
+      "value": "32%",
+      "text": "Average Growth Achieved"
+    }
+  ],
+  "ourMethods": [
+    {
+      "title": "Frontend Development",
+      "smallHeading": "Modern React Applications",
+      "category": "Web Development",
+      "image": "/assets/react.svg"
+    },
+    {
+      "title": "Backend Development",
+      "smallHeading": "Scalable Server Solutions",
+      "category": "API Development",
+      "image": "/assets/react.svg"
+    },
+    {
+      "title": "REST API Development",
+      "smallHeading": "Secure & High-Performance APIs",
+      "category": "Backend Services",
+      "image": "/assets/react.svg"
+    }
+  ],
+  "ourExpertise": [
+    {
+      "category": "Development",
+      "title": "Custom Web Applications",
+      "smallHeading": "High-performance applications built with modern technologies and scalable architectures."
+    },
+    {
+      "category": "Cloud Solutions",
+      "title": "Infrastructure & DevOps",
+      "smallHeading": "Reliable deployment pipelines, cloud optimization, and automated operations."
+    },
+    {
+      "category": "Digital Strategy",
+      "title": "Business Growth Consulting",
+      "smallHeading": "Data-driven strategies that help businesses improve efficiency and expand their market reach."
+    }
+  ],
+  "reviews": [
+    {
+      "comment": "Excellent developer with strong problem-solving skills. Highly recommended.",
+      "name": "David Wilson",
+      "designation": "Engineering Lead",
+      "rating": "5"
+    },
+    {
+      "comment": "Delivered clean and maintainable code while meeting all project requirements.",
+      "name": "Sophia Martin",
+      "designation": "Project Coordinator",
+      "rating": "4"
+    },
+    {
+      "comment": "Great communication and technical expertise. The deployment process was seamless.",
+      "name": "James Anderson",
+      "designation": "DevOps Manager",
+      "rating": "5"
+    },
+    {
+      "comment": "The UI implementation was pixel-perfect and performed exceptionally well across devices.",
+      "name": "Olivia Thompson",
+      "designation": "UX Designer",
+      "rating": "5"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What industries do you work with?",
+      "answer": "We collaborate with startups, SaaS companies, e-commerce brands, healthcare providers, and enterprise organizations."
+    },
+    {
+      "question": "How long does a typical project take?",
+      "answer": "Project timelines vary depending on complexity, but most engagements range from 4 to 16 weeks."
+    },
+    {
+      "question": "Do you provide ongoing support after launch?",
+      "answer": "Yes, we offer maintenance, monitoring, optimization, and technical support packages after deployment."
+    },
+    {
+      "question": "Can you work with existing development teams?",
+      "answer": "Absolutely. We frequently integrate with in-house teams to provide additional expertise and accelerate delivery."
+    },
+    {
+      "question": "What technologies do you specialize in?",
+      "answer": "Our team specializes in React, Next.js, Node.js, TypeScript, cloud platforms, and modern DevOps practices."
+    },
+    {
+      "question": "How do we get started?",
+      "answer": "Simply schedule a consultation, share your requirements, and we'll propose a tailored solution and roadmap."
+    }
+  ]
+}

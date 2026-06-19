@@ -8,7 +8,7 @@ import SectionHeading from "./sectionHeading";
 import SectionSmallHeading from "./sectionSmallHeading";
 import SectionTag from "./sectionTag";
 
-export default function CardWithSmallImageAndTags({ hover, link }) {
+export default function CardWithSmallImageAndTags({ hover, link, data }) {
   let router = useRouter();
 
   return (
@@ -17,7 +17,7 @@ export default function CardWithSmallImageAndTags({ hover, link }) {
       className={`${hover ? "group cursor-pointer" : ""} flex flex-col gap-[40px] lg:gap-0 lg:content-between h-min bg-[#f0f1f5] rounded-[12px] w-full min-h-unset lg:min-h-[500px] p-[24px] lg:p-[32px]`}
     >
       <div className="flex justify-between items-center overflow-hidden">
-        <Image src={`/assets/react.svg`} height={64} width={64} alt="icon" />
+        <Image src={data?.image} height={64} width={64} alt="icon" />
         <Link
           href={`/service-detail`}
           className={`inline-flex items-center gap-[8px] bg-[#111] text-[#fff] text-[14px] font-[600] rounded-[99px] px-[16px] py-[11px] shadow-[0_4px_14px_rgba(0,0,0,0.12)] hover:bg-[#222] hover:shadow-[0_8px_24px_rgba(0,0,0,0.18)] transition-all duration-300 ease-out transform ${
@@ -36,7 +36,7 @@ export default function CardWithSmallImageAndTags({ hover, link }) {
 
       <div className="h-min flex flex-col w-fill gap-[12px] p-0 mt-auto">
         <SectionTag
-          heading={`Data driven`}
+          heading={data?.category}
           bgColor={`#fff`}
           textColor={`#111`}
         />
@@ -45,14 +45,14 @@ export default function CardWithSmallImageAndTags({ hover, link }) {
           color={`#111`}
           letterSpacing={`tracking-[-0.06em]`}
           lineHeight={`leading-[1.2em]`}
-          text={`We base every decision on insights, analytics and measurable outcomes`}
+          text={data?.title}
         />
         <SectionSmallHeading
           color={`#657084`}
           fontSize={`text-[16px]`}
           lineHeight={`leading-[1.4em]`}
           letterSpacing={`tracking-[-0.02em]`}
-          text={`FlatWhite uses data and analytics to guide strategy and deliver tangible results.`}
+          text={data?.smallHeading}
           fontWeight={500}
         />
       </div>

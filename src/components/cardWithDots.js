@@ -7,16 +7,19 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function CardWithDots({
-  value,
-  activeIndex,
-  totalBars,
-  description = "average EBITDA growth in 12 months",
-}) {
+export default function CardWithDots({ data, activeIndex, totalBars }) {
   const valueRef = useRef(null);
 
   useEffect(() => {
     if (!valueRef.current) return;
+
+    const target = parseFloat(data.value);
+
+    const suffix = data.value.includes("+")
+      ? "+"
+      : data.value.includes("%")
+        ? "%"
+        : "";
 
     const animation = gsap.fromTo(
       valueRef.current,
@@ -24,7 +27,7 @@ export default function CardWithDots({
         textContent: 0,
       },
       {
-        textContent: value,
+        textContent: target,
         duration: 2,
         ease: "power1.out",
         snap: { textContent: 1 },
@@ -36,18 +39,20 @@ export default function CardWithDots({
         },
 
         onUpdate: function () {
-          valueRef.current.innerHTML =
-            Math.round(this.targets()[0].textContent) + "%";
+          if (valueRef.current) {
+            valueRef.current.innerHTML =
+              Math.round(this.targets()[0].textContent) + suffix;
+          }
         },
       },
     );
 
     return () => {
-      animation.scrollTrigger?.kill();
+      if (animation.scrollTrigger) animation.scrollTrigger.kill();
       animation.kill();
     };
-  }, [value]);
-  
+  }, [data?.value]);
+
   return (
     <div className="relative w-full h-full rounded-[12px] bg-[rgba(255,255,255,0.04)] p-[24px] overflow-hidden">
       <div className="flex items-start justify-between">
@@ -55,7 +60,7 @@ export default function CardWithDots({
           ref={valueRef}
           className="text-white text-[46px] leading-[1em] tracking-[-0.06em] font-normal"
         >
-          0%
+          0
         </h2>
 
         <div className="flex items-center gap-[2px] pt-2">
@@ -72,7 +77,7 @@ export default function CardWithDots({
 
       <div className="mt-10">
         <p className="text-right text-[14px] leading-[1.4em] tracking-[-0.02em] font-normal text-[rgb(191,199,212)] ml-auto">
-          {description}
+          {data?.text}
         </p>
       </div>
     </div>

@@ -3,6 +3,9 @@ import CardWithSmallImageAndTags from "@/components/cardWithSmallImageAndTags";
 import SectionHeading from "@/components/sectionHeading";
 import SectionSmallHeading from "@/components/sectionSmallHeading";
 
+// services data
+import services from "../../data/services.json"
+
 export default function Services() {
   return (
     <div className="w-full flex flex-col gap-[32px] lg:gap-[40px] xl:gap-[80px] h-min px-[20px] lg:px-[40px] xl:px-[124px] pt-[50px] sm:pt-[70px] md:pt-[100px] lg:pt-[120px] xl:pt-[140px] pb-[60px] lg:pb-[92px] xl:pb-[92px] max-w-[1440px] mx-auto">
@@ -28,9 +31,9 @@ export default function Services() {
       </div>
 
       <div className="h-min flex flex-wrap gap-[4px] w-full">
-        {Array.from({ length: 4 }).map((_, index) => (
+        {services.servicesData.map((item,index) => (
           <div key={index} className="w-full lg:w-[calc(50%-2px)]">
-            <CardWithSmallImageAndTags hover={true} link={`/service-detail`}/>
+            <CardWithSmallImageAndTags hover={true} link={`/service-detail`} data={item}/>
           </div>
         ))}
       </div>

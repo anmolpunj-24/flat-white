@@ -6,7 +6,7 @@ import SectionTag from "@/components/sectionTag";
 // nextjs import
 import Image from "next/image";
 
-export default function FutureReadyBusiness() {
+export default function FutureReadyBusiness({data}) {
   return (
     <div className="px-[12px]">
       <div className="bg-[#0a0f15] rounded-tl-[12px] rounded-tr-[12px]">
@@ -24,7 +24,7 @@ export default function FutureReadyBusiness() {
               letterSpacing={`tracking-[-0.06em]`}
               lineHeight={`leading-[1em]`}
               maxWidth={`max-w-[850px]`}
-              text={`Empowering сompanies to grow smarter and faster`}
+              text={data?.heading}
             />
 
             <div className="flex flex-col lg:flex-row justify-between gap-[32px] lg:gap-0">
@@ -33,7 +33,7 @@ export default function FutureReadyBusiness() {
                 fontSize={`text-[16px]`}
                 lineHeight={`leading-[1.4em]`}
                 letterSpacing={`tracking-[-0.02em]`}
-                text={`FlatWhite partners with leadership teams to redefine strategy, streamline operations and unlock sustainable growth. We translate ambition into an actionable roadmap using data, technology and close collaboration.`}
+                text={data?.smallHeading}
                 maxWidth={`max-w-[410px]`}
               />
 

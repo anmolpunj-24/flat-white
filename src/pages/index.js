@@ -9,17 +9,20 @@ import Pricing from "@/mainComponents/pricing";
 import WhatWeOffer from "@/mainComponents/whatWeOffer";
 import WhoWeAre from "@/mainComponents/whoWeAre";
 
+// data import
+import homeData from "../../data/home.json"
+
 export default function Home() {
   return (
     <>
       {/* future ready business */}
-      <FutureReadyBusiness />
+      <FutureReadyBusiness data={homeData?.banner}/>
 
       {/* who we are */}
-      <WhoWeAre />
+      <WhoWeAre data={homeData?.whoAreWe}/>
 
       {/* our methods */}
-      <OurMethods />
+      <OurMethods data={homeData?.ourMethods}/>
 
       {/* what we offer */}
       <WhatWeOffer />
@@ -28,16 +31,16 @@ export default function Home() {
       <OurProcess />
 
       {/* our experties */}
-      <OurExpertise />
+      <OurExpertise data={homeData?.ourExpertise}/>
 
       {/* partnership */}
-      <Partnership />
+      <Partnership data={homeData?.reviews}/>
 
       {/* pricing */}
       {/* <Pricing /> */}
 
       {/* faq */}
-      <Faqs />
+      <Faqs data={homeData?.faqs}/>
     </>
   );
 }

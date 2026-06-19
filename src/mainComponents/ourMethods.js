@@ -4,7 +4,7 @@ import Divider from "@/components/divider";
 import SectionHeading from "@/components/sectionHeading";
 import SectionTag from "@/components/sectionTag";
 
-export default function OurMethods() {
+export default function OurMethods({data}) {
   return (
     <div className="max-w-[1440px] mx-auto">
       <div className="flex flex-col gap-[40px] lg:gap-[100px] xl:gap-[146px] pt-[46px] pb-[32px] lg:py-[46px] px-[20px] lg:px-[40px] xl:px-[124px] h-min">
@@ -28,12 +28,12 @@ export default function OurMethods() {
       <Divider bgColor={`#f0f1f5`} />
 
       <div className="h-min flex flex-wrap gap-[4px] w-full px-[12px] pt-[32px] lg:pt-[46px] pb-[46px] lg:pb-[92px]">
-        {Array.from({ length: 3 }).map((_, index) => (
+        {data.map((item, index) => (
           <div
             key={index}
             className="w-full lg:w-[calc(50%-2px)] xl:w-[calc(33.333%-3px)]"
           >
-            <CardWithSmallImageAndTags />
+            <CardWithSmallImageAndTags data={item}/>
           </div>
         ))}
       </div>

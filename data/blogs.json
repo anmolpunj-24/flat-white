@@ -1,0 +1,44 @@
+{
+  "blogsData": [
+    {
+      "title": "Mastering React Performance Optimization",
+      "date": "2026-03-15",
+      "image": "/assets/people.avif"
+    },
+    {
+      "title": "Getting Started with Docker and Containers",
+      "date": "2026-05-28",
+      "image": "/assets/people1.avif"
+    },
+    {
+      "title": "Building Scalable APIs with Node.js",
+      "date": "2026-06-10",
+      "image": "/assets/person.avif"
+    },
+    {
+      "title": "A Beginner's Guide to Kubernetes",
+      "date": "2026-01-22",
+      "image": "/assets/people.avif"
+    },
+    {
+      "title": "Understanding CI/CD Pipelines",
+      "date": "2026-02-11",
+      "image": "/assets/people1.avif"
+    },
+    {
+      "title": "Deploying Applications with AWS",
+      "date": "2026-04-07",
+      "image": "/assets/person.avif"
+    },
+    {
+      "title": "Creating Smooth Web Animations with GSAP",
+      "date": "2026-04-29",
+      "image": "/assets/people.avif"
+    },
+    {
+      "title": "Modern Database Design Best Practices",
+      "date": "2026-05-16",
+      "image": "/assets/people1.avif"
+    }
+  ]
+}

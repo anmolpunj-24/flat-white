@@ -7,6 +7,9 @@ import TeamCard from "@/components/teamCard";
 // react import
 import { useEffect } from "react";
 
+// team data import
+import teams from "../../data/team.json";
+
 // gsap import
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -242,8 +245,8 @@ export default function AboutUs() {
           </div>
           <Divider bgColor={`#222631`} />
           <div className="flex flex-col lg:grid lg:grid-cols-[repeat(2,minmax(200px,1fr))] justify-center gap-[4px] h-min px-[20px] pt-[32px] pb-[20px] lg:px-[40px] xl:px-[124px] py-[92px]">
-            {Array.from({ length: 6 }).map((_, index) => (
-              <TeamCard key={index} />
+            {teams.ourTeam.map((item, index) => (
+              <TeamCard key={index} data={item} />
             ))}
           </div>
         </div>

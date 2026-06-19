@@ -1,0 +1,130 @@
+{
+  "slug": "web-development",
+  "name": "Web Development",
+  "metaTitle": "Custom Web Development Solutions That Drive Growth",
+  "metaDescription": "Build fast, scalable, and user-focused websites that help your business stand out and convert visitors into customers.",
+  "briefDetail": "We design and develop modern websites and web applications tailored to your business goals. From landing pages and corporate websites to complex web platforms, we create solutions that are secure, scalable, and optimized for performance.",
+  "description": "Our web development services focus on creating digital experiences that are visually appealing, technically robust, and conversion-driven. We leverage modern technologies and industry best practices to deliver responsive, SEO-friendly, and high-performing websites. Whether you're a startup looking to establish your online presence or an enterprise seeking a custom web solution, our team can build a platform that aligns with your objectives and scales with your business.",
+  "technologies": [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "PostgreSQL",
+    "Tailwind CSS",
+    "GSAP",
+    "AWS"
+  ],
+  "benefits": [
+    {
+      "title": "Enhanced User Experience",
+      "description": "Deliver intuitive and engaging experiences that keep visitors engaged and encourage conversions."
+    },
+    {
+      "title": "Improved Performance",
+      "description": "Fast-loading pages and optimized code improve user satisfaction and search engine rankings."
+    },
+    {
+      "title": "Scalable Architecture",
+      "description": "Build a foundation that can grow alongside your business without requiring costly rebuilds."
+    },
+    {
+      "title": "SEO-Friendly Structure",
+      "description": "Implement best practices that help search engines crawl, index, and rank your website effectively."
+    }
+  ],
+  "features": [
+    {
+      "title": "Custom Website Development",
+      "description": "Fully tailored websites designed to meet your unique business requirements."
+    },
+    {
+      "title": "Responsive Design",
+      "description": "Websites optimized for desktops, tablets, and mobile devices."
+    },
+    {
+      "title": "CMS Integration",
+      "description": "Easy-to-manage content systems that empower your team to update content without technical assistance."
+    },
+    {
+      "title": "API & Third-Party Integrations",
+      "description": "Connect your website with payment gateways, CRMs, analytics tools, and other business platforms."
+    },
+    {
+      "title": "Performance Optimization",
+      "description": "Improve speed, accessibility, and overall website performance."
+    }
+  ],
+  "process": [
+    {
+      "title": "Discovery & Planning",
+      "description": "Understand your business goals, audience, and technical requirements to create a development roadmap."
+    },
+    {
+      "title": "UI/UX Design",
+      "description": "Design intuitive user interfaces and engaging user experiences aligned with your brand."
+    },
+    {
+      "title": "Development",
+      "description": "Build the frontend and backend using modern technologies and coding standards."
+    },
+    {
+      "title": "Testing & Quality Assurance",
+      "description": "Perform comprehensive testing to ensure functionality, performance, and security."
+    },
+    {
+      "title": "Deployment & Support",
+      "description": "Launch the project and provide ongoing maintenance, monitoring, and support."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How long does a web development project take?",
+      "answer": "Project timelines vary based on complexity, but most websites are completed within 4 to 12 weeks."
+    },
+    {
+      "question": "Will my website be mobile-friendly?",
+      "answer": "Yes, every website we develop is fully responsive and optimized for all modern devices."
+    },
+    {
+      "question": "Can you redesign my existing website?",
+      "answer": "Absolutely. We can modernize your current website while improving performance, usability, and SEO."
+    },
+    {
+      "question": "Do you provide ongoing support after launch?",
+      "answer": "Yes, we offer maintenance and support packages to ensure your website remains secure and up-to-date."
+    }
+  ],
+  "relatedBlogs": [
+    {
+      "title": "Why Businesses Need Modern Websites",
+      "date": "2026-01-10",
+      "image": "/assets/people.avif"
+    },
+    {
+      "title": "React vs Next.js: Which Is Right for Your Project?",
+      "date": "2026-02-05",
+      "image": "/assets/people.avif"
+    },
+    {
+      "title": "Website Performance Best Practices",
+      "date": "2026-03-18",
+      "image": "/assets/people.avif"
+    },
+    {
+      "title": "SEO-Friendly Web Development Guide",
+      "date": "2026-04-22",
+      "image": "/assets/people.avif"
+    }
+  ],
+  "moreServices": [
+    "UI/UX Design",
+    "Mobile App Development",
+    "SEO Services",
+    "Digital Marketing",
+    "E-commerce Development",
+    "Cloud Solutions"
+  ]
+}

@@ -6,6 +6,9 @@ import SectionTag from "@/components/sectionTag";
 // nextjs import
 import Image from "next/image";
 
+// testimonial data import
+import testimonials from "../../data/testimonials.json";
+
 export default function Testimonials() {
   return (
     <div className="h-min flex flex-col max-w-[1440px] items-center gap-[40px] xl:gap-[96px] w-full pt-[46px] pb-[60px] lg:pb-[124px] px-[12px] lg:px-[40px] xl:px-[124px] m-auto">
@@ -68,9 +71,9 @@ export default function Testimonials() {
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[18px]">
-          {[1, 2].map((item) => (
+          {testimonials?.featuredStories.map((item, index) => (
             <div
-              key={item}
+              key={index}
               className="relative bg-[#f0f1f5] rounded-[24px] p-[30px] lg:p-[40px] flex flex-col gap-[24px]"
             >
               <Image
@@ -84,17 +87,16 @@ export default function Testimonials() {
               <span className="text-[18px] text-[#f59e0b]">★★★★★</span>
 
               <p className="text-[20px] lg:text-[24px] font-[500] tracking-[-0.06em] leading-[1.2em] text-[#111]">
-                "FlatWhite helped us increase qualified leads by 230% in just
-                six months."
+                {item?.comment}
               </p>
 
               <div className="flex items-center gap-[16px] mt-auto">
                 <div className="w-[56px] h-[56px] rounded-full bg-[#d9dee5]" />
 
                 <div>
-                  <h4 className="font-[600] text-[#111]">Sarah Johnson</h4>
+                  <h4 className="font-[600] text-[#111]">{item?.name}</h4>
                   <p className="text-[14px] text-[#657084]">
-                    Marketing Director, NovaTech
+                    {item?.designation}
                   </p>
                 </div>
               </div>
@@ -113,32 +115,7 @@ export default function Testimonials() {
         />
 
         <div className="columns-1 md:columns-2 xl:columns-3 gap-[10px] space-y-[20px]">
-          {[
-            {
-              text: "The redesign improved our conversion rates almost immediately.",
-              size: "small",
-            },
-            {
-              text: "Working with FlatWhite gave us a clear roadmap for growth and execution. Their team felt like an extension of our own.",
-              size: "large",
-            },
-            {
-              text: "Our organic traffic grew by more than 180% within four months.",
-              size: "medium",
-            },
-            {
-              text: "Excellent communication, fast delivery, and measurable results.",
-              size: "small",
-            },
-            {
-              text: "The entire customer journey was reworked. We now have a much stronger positioning and a website that finally converts.",
-              size: "large",
-            },
-            {
-              text: "Highly recommend them to any growing business.",
-              size: "small",
-            },
-          ].map((item, index) => (
+          {testimonials?.reviews.map((item, index) => (
             <div
               key={index}
               className={`break-inside-avoid bg-[#f0f1f5] rounded-[24px] p-[24px] mb-[20px]
@@ -156,7 +133,7 @@ export default function Testimonials() {
                 </span>
 
                 <p className="text-[16px] lg:text-[20px] leading-[1.3] tracking-[-0.03em] text-[#111]">
-                  "{item.text}"
+                  {item.comment}
                 </p>
 
                 <div className="mt-auto pt-[24px]">
@@ -165,11 +142,11 @@ export default function Testimonials() {
 
                     <div>
                       <h5 className="font-[600] text-[#111] text-[14px]">
-                        Client Name
+                        {item?.name}
                       </h5>
 
                       <p className="text-[13px] text-[#657084]">
-                        Founder, Company
+                        {item?.designation}
                       </p>
                     </div>
                   </div>

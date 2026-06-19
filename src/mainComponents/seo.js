@@ -1,11 +1,11 @@
 // nextjs import
 import Head from "next/head";
 
-export default function Seo() {
+export default function Seo({ metaTitle, metaDesc }) {
   return (
     <Head>
-      <title>FlatWhite</title>
-      <meta name="description" content="FlatWhite" />
+      <title>{metaTitle ?? "FlatWhite"}</title>
+      <meta name="description" content={metaDesc ?? "FlatWhite"} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link
         rel="icon"

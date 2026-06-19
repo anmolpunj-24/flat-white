@@ -4,7 +4,7 @@ import Image from "next/image";
 // react import
 import { useState } from "react";
 
-export default function TeamCard() {
+export default function TeamCard({data}) {
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -19,7 +19,7 @@ export default function TeamCard() {
             onClick={(e) => e.stopPropagation()}
           >
             <Image
-              src="/assets/woman.webp"
+              src={data?.image}
               alt="expanded image"
               width={500}
               height={500}
@@ -33,14 +33,14 @@ export default function TeamCard() {
         <div className="flex flex-col flex-col-reverse sm:flex-row h-min gap-[12px] pb-[42px] items-start sm:items-center justify-between">
           <div className="items-center gap-[10px]">
             <h4 className="text-[32px] text-white tracking-[-0.06em]">
-              Emma Carter
+              {data.name}
             </h4>
-            <div className="flex gap-[8px]">
+            <div className="flex flex-wrap gap-[8px]">
               <p className="uppercase text-[12px] rounded-[99px] px-[12px] py-[6px] bg-[#222631] w-min h-min text-white whitespace-pre font-[600]">
-                Managing Partner
+                {data?.designation}
               </p>
               <p className="uppercase text-[12px] rounded-[99px] px-[12px] py-[6px] bg-[#222631] w-min h-min text-white whitespace-pre font-[600]">
-                London
+                {data?.city}
               </p>
               <span className="group rounded-[99px] p-[7px] bg-[#222631] hover:bg-white cursor-pointer transition-all duration-300">
                 <Image
@@ -67,7 +67,7 @@ export default function TeamCard() {
           >
             <Image
               className="object-cover rounded-[12px]"
-              src={`/assets/woman.webp`}
+              src={data?.image}
               height={100}
               width={100}
               alt="image"
@@ -75,10 +75,7 @@ export default function TeamCard() {
           </div>
         </div>
         <p className="text-[16px] leading-[1.4em] tracking-[-0.02em] whitespace-pre-wrap break-words text-[#ffffffcc]">
-          Emma leads FlatWhite with over 15 years of experience in corporate
-          strategy and business transformation. She specializes in guiding
-          global companies through complex change and scaling growth
-          initiatives.
+          {data?.about}
         </p>
       </div>
     </>

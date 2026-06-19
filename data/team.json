@@ -1,0 +1,32 @@
+{
+  "ourTeam": [
+    {
+      "name": "Ethan Carter",
+      "designation": "Founder & CEO",
+      "city": "New York, USA",
+      "image": "/assets/person.avif",
+      "about": "Visionary business leader with over 12 years of experience helping startups and enterprises scale through technology and innovation."
+    },
+    {
+      "name": "Sophia Bennett",
+      "designation": "Creative Director",
+      "city": "London, UK",
+      "image": "/assets/woman.webp",
+      "about": "Specializes in brand strategy, user experience, and digital product design with a passion for creating memorable customer experiences."
+    },
+    {
+      "name": "Liam Rodriguez",
+      "designation": "Head of Engineering",
+      "city": "Toronto, Canada",
+      "image": "/assets/person.avif",
+      "about": "Experienced software architect focused on scalable systems, cloud infrastructure, and high-performance web applications."
+    },
+    {
+      "name": "Ava Mitchell",
+      "designation": "Marketing Strategist",
+      "city": "Sydney, Australia",
+      "image": "/assets/woman.webp",
+      "about": "Growth-focused marketer with expertise in SEO, paid media, analytics, and customer acquisition strategies and high-performance web applications."
+    }
+  ]
+}

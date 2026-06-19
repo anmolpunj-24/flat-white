@@ -1,7 +1,7 @@
 // react import
 import { useState } from "react";
 
-export default function FaqCard() {
+export default function FaqCard({faqs}) {
   const [isOpen, setIsOpen] = useState(false);
 
   let expandFaq = () => {
@@ -15,7 +15,7 @@ export default function FaqCard() {
     >
       <div className="group w-full items-center p-[32px] flex justify-between gap-[12px]">
         <p className="text-white whitespace-pre-wrap break-words text-[18px] font-[500] leading-[1.3em] tracking-[-0.04em]">
-          What services do you offer?
+         {faqs?.question}
         </p>
 
         <div
@@ -59,10 +59,7 @@ export default function FaqCard() {
         <div className="overflow-hidden">
           <div className="px-[32px] pb-[32px]">
             <p className="text-white/80 text-[16px] leading-[1.4em] tracking-[-0.02em]">
-              We specialize in strategic and operational consulting. Our team
-              helps organizations design growth strategies, optimize business
-              processes, implement digital solutions, drive innovation, and
-              manage organizational change.
+              {faqs?.answer}
             </p>
           </div>
         </div>

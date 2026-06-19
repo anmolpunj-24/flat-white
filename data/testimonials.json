@@ -1,0 +1,60 @@
+{
+  "featuredStories": [
+    {
+      "comment": "Working with team was an exceptional experience. The project was delivered ahead of schedule, and the attention to detail in both design and functionality exceeded our expectations.",
+      "name": "Sarah Johnson",
+      "designation": "Product Manager",
+      "rating": "5"
+    },
+    {
+      "comment": "Our application performance improved significantly after the optimization work. The code quality, communication, and professionalism were outstanding throughout the engagement.",
+      "name": "Michael Chen",
+      "designation": "CTO",
+      "rating": "5"
+    }
+  ],
+  "reviews": [
+    {
+      "comment": "Excellent developer with strong problem-solving skills. Highly recommended.",
+      "name": "David Wilson",
+      "designation": "Engineering Lead",
+      "rating": "5",
+      "size": "large"
+    },
+    {
+      "comment": "Delivered clean and maintainable code while meeting all project requirements.",
+      "name": "Sophia Martin",
+      "designation": "Project Coordinator",
+      "rating": "4",
+      "size": "small"
+    },
+    {
+      "comment": "Great communication and technical expertise. The deployment process was seamless.",
+      "name": "James Anderson",
+      "designation": "DevOps Manager",
+      "rating": "5",
+      "size": "medium"
+    },
+    {
+      "comment": "The UI implementation was pixel-perfect and performed exceptionally well across devices.",
+      "name": "Olivia Thompson",
+      "designation": "UX Designer",
+      "rating": "5",
+      "size": "large"
+    },
+    {
+      "comment": "Very reliable and proactive. Suggestions provided during development improved the final product significantly.",
+      "name": "Daniel Lee",
+      "designation": "Business Owner",
+      "rating": "5",
+      "size": "medium"
+    },
+    {
+      "comment": "Fast turnaround time, excellent code quality, and professional collaboration throughout the project.",
+      "name": "Isabella Garcia",
+      "designation": "Technical Consultant",
+      "rating": "4",
+      "size": "small"
+    }
+  ]
+}

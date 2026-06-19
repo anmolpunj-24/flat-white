@@ -14,7 +14,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function WhoWeAre() {
+export default function WhoWeAre({ data }) {
   const containerRef = useRef(null);
 
   const items = [
@@ -127,15 +127,15 @@ export default function WhoWeAre() {
           </div>
 
           <div className="h-min flex flex-wrap gap-[4px] px-[12px] pb-[12px] lg:pb-[46px] w-full">
-            {Array.from({ length: 4 }).map((_, index) => (
+            {data.map((item, index) => (
               <div
                 key={index}
                 className="w-full lg:w-[calc(50%-2px)] xl:w-[calc(25%-4px)]"
               >
                 <CardWithDots
                   activeIndex={index}
-                  totalBars={`4`}
-                  value={`32`}
+                  totalBars={item.length}
+                  data={item}
                 />
               </div>
             ))}
